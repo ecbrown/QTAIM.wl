@@ -50,7 +50,7 @@ determined person can figure it out. :-)
 Note: This step is somewhat optional. WL routines are now enabled
 unless MathLink is installed.  Still required for WFN file import!
 
-In order to use this code, you must build a MathLink executable. You
+In order to use this code, you must/ought to build a MathLink executable. You
 then have to patch up the code to use it. An example, using MacPorts
 gfortran and MathLink's mcc in my PATH variable (I may have hacked mcc
 script in a couple places to first find gcc-mp-10 I can't recall):
