@@ -2,11 +2,25 @@
 ** Disclaimer: This is experimental code, use at your own risk.
   
 ** Please note that this repository uses Git LFS.  You must:
-
+   
 #+BEGIN_SRC bash
-git lfs clone https://github.com/ecbrown/QTAIM.wl.git
+  # git lfs init
+  git lfs clone https://github.com/ecbrown/QTAIM.wl.git
 #+END_src
 
+* News
+
+  - This project's [[https://community.wolfram.com/groups/-/m/t/2305648][announcement]] was a staff pick on Wolfram's
+    community forum!
+  - Primitive Cutoffs in Mathematica-compiled versions (faster than
+    current Fortran!)
+  - Parallelism (master)
+  - Bond Path Styles (master)
+  - Beta Sphere Tuning (master)
+  - 1.0.0 Released
+
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/qtaim-graphics-collage.png?raw=true]]
+  
 * What
 
 Wolfram Language (Mathematica) Package for computations involving the
@@ -61,7 +75,17 @@ script in a couple places to first find gcc-mp-10 I can't recall):
   mcc -b64 qtaim.o qtaim.tm main.c -o qtaim
 #+END_src
 
-This is because the electron density and gradient evaluations are so
+on GNU/Linux, you may have to link gfortran:
+#+BEGIN_SRC bash
+  # sudo apt install build-essential gcc g++ gfortran
+  gfortran -fopenmp -O3 -fPIC -c -o qtaim.o qtaim.f90
+  mcc qtaim.o qtaim.tm main.c -o qtaim
+#+END_src
+
+I would appreciate it if someone would provide instructions for
+windows, but I suspect they are similar.
+
+Akk this is because the electron density and gradient evaluations are so
 plentiful and expensive, that they must be executed in a compiled
 language.
 
@@ -148,11 +172,15 @@ and the plane that shows the pile-up in pink, above and below the plane which pr
 
 [[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/contour-plot-of-laplacian-of-electron-density-of-water.png?raw=true]]
 
-** Atomic Basin Delineation (WIP)
- 
-** Atomic Integration (WIP)
+** Atomic Basin Delineation
+   
+** Atomic Integration 
 
-* Noteworthy Features (Incomplete Laundry List)
+
+   
+* Noteworthy Features, Novelties, and other Curiosities (Incomplete Laundry List)
+  - [[https://aoterodelaroza.github.io/critic2][Critic2]] / AIMAll / MultiWFN etc. are great and I recommend these
+    results be checked against them
   - Infinite-order analytical partial derivatives based on two
     applications of Leibniz Product Rule of Cartesian GTOs. The best
     way to find roots is with Hessian information.  Since the
@@ -160,8 +188,6 @@ and the plane that shows the pile-up in pink, above and below the plane which pr
     derivatives, its Hessian needs fourth order derivatives! This is
     too high a derivative to hand code, and everything here is very
     stiff for numerical differentiation.  Written in Modern Fortran.
-  - [[https://aoterodelaroza.github.io/critic2][Critic2]] / AIMAll / MultiWFN etc. are great and I recommend these
-    results be checked against them
   - Molecular graphs are computed using "J.M."'s StackExchange for 3D
     critical point location. This technique generalizes to fields for
     which there may not be heuristics for searching, e.g. bond paths
@@ -173,14 +199,14 @@ and the plane that shows the pile-up in pink, above and below the plane which pr
   - Adams-Bashforth-Moulton (ABM) integrator with variable order/step
     due to Shampine and Watts (DEABM).  We already know these are
     going start or are going to get stiff, so even better than
-    Doermand-Prince.
+    Doermand-Prince.  Need to verify this since tuning beta spheres.
   - Mathematica's infinite possibilities for styling graphics,
     scripting, orchestrating, extending, and exploring
+  - Parallelization opportunities abound because its easy to
+    subdivide a number of these methods into subregions and then
+    combine. (Split-Apply-Combine over different computers even!)
   - Written in a language that is rich with "scientific methods"
     e.g. has e.g. Hermite Polynomials built-in.
-  - Parallelization opportunities abound because its easy to subdivide
-    a number of these methods into subregions and then
-    combine. (Split-Apply-Combine)
   - I can't tell if this package is slow, or just that accurate images
     without jagged edges just take a long time to compute. Note that
     parallelization may be found at the frame/configuration/atom level
@@ -192,12 +218,7 @@ and the plane that shows the pile-up in pink, above and below the plane which pr
     how [[https://aoterodelaroza.github.io/critic2][Critic2]]'s results can be utilized.  Its routines cover
     additional domains such as solid state and this package could be
     "just graphics" in certain cases.
-  - There are some dumb things in here that have fixes, e.g. calling
-    derivative components separately. No primitive cutoffs with
-    distance pre-screen. Some routines here are simply placeholders
-    and may be optimized. (In case you are "concerned", I'm just
-    establishing a foothold. And addressing my own perfectionism.  :-)
-    
+
 * Contact
 
   Please send suggestions/comments to:
