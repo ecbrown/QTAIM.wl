@@ -85,7 +85,7 @@ on GNU/Linux, you may have to link gfortran:
 I would appreciate it if someone would provide instructions for
 windows, but I suspect they are similar.
 
-Akk this is because the electron density and gradient evaluations are so
+All this is because the electron density and gradient evaluations are so
 plentiful and expensive, that they must be executed in a compiled
 language.
 
@@ -95,7 +95,7 @@ dependency.
 
 An advantage is that it is a mechanism for interfacing with other
 codes.  One simply needs to add C/Fortran code and write the interface
-like the example for rho1.
+like the example for *rho1*, /vide infra/.
 
 * Example Uses
 
