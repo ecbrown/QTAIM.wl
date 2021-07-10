@@ -67,7 +67,7 @@ unless MathLink is installed.  Still required for WFN file import!
 In order to use this code, you must/ought to build a MathLink executable. You
 then have to patch up the code to use it. An example, using MacPorts
 gfortran and MathLink's mcc in my PATH variable (I may have hacked mcc
-script in a couple places to first find gcc-mp-10 I can't recall):
+script in a couple places to first find gcc-mp-10, so it might not need -lgfortran):
 
 #+BEGIN_SRC bash
   export PATH=/Applications/Mathematica.app/Contents/SystemFiles/Links/MathLink/DeveloperKit/MacOSX-x86-64/CompilerAdditions:${PATH}
@@ -79,7 +79,7 @@ on GNU/Linux, you may have to link gfortran:
 #+BEGIN_SRC bash
   # sudo apt install build-essential gcc g++ gfortran
   gfortran -fopenmp -O3 -fPIC -c -o qtaim.o qtaim.f90
-  mcc qtaim.o qtaim.tm main.c -o qtaim
+  mcc qtaim.o qtaim.tm main.c -o qtaim -lgfortran
 #+END_src
 
 I would appreciate it if someone would provide instructions for
