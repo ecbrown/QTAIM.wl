@@ -68,17 +68,14 @@ to complain about concerning Wolfram Language as an implementation. A
 determined person can figure it out. :-)
 
 * Why not
-There are several excellent QTAIM packages available for production
-work. Ease of use, customization, and adjacency to featureful
-technical computing platform that has a wide spectrum of methods.
-
 This is not a project to do "production" QTAIM, but rather to explain
 what QTAIM is and make nice graphics, and a way to investigate easily
 some of the numerical issues that underpin it.  I always err on the
 side of slow and reliable.  If QTAIM.wl is useful for production, that
 is a collateral benefit.
 
-An example of something that I am interested in is comparing ODE methods.
+An example of something that I am interested in is comparing ODE methods 
+for steepest-ascent paths.
 Mathematica has a broad suite of ODE algorithms that have the same interface.
 
 * Installation Notes
