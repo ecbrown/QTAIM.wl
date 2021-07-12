@@ -9,15 +9,19 @@
 #+END_src
 
 * News
-
+  - 1.1.0 Released (Code name "Mulligan")
   - This project's [[https://community.wolfram.com/groups/-/m/t/2305648][announcement]] was a staff pick on Wolfram's
     community forum!
-  - Primitive Cutoffs in Mathematica-compiled versions (faster than
-    current Fortran!)
-  - Parallelism (master)
-  - Bond Path Styles (master)
-  - Beta Sphere Tuning (master)
-  - 1.0.0 Released
+  - Primitive Cutoffs in Mathematica-compiled versions (competitive
+    with Fortran, so Fortran routines removed)
+  - Parallel routines for integration
+  - Bond Path Styles, dashed/dotted based on Laplacian
+  - Beta Sphere Tuning
+  - Drastic simplification of the API, moving routines into QTAIM.m
+  - Plots use rectilinear aspect ratio
+  - Better design of bounding box, allowing for easier adjustment and
+    propagation by making a variable
+  - Improved coloring of critical points
 
 [[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/qtaim-graphics-collage.png?raw=true]]
   
@@ -32,7 +36,8 @@ A. Yes, an atom can be defined as the union of steepest ascent
 gradient paths through the electron density, and its attractor. These
 atoms are individually proper quantum systems exhibiting the same
 boundary conditions that are applied to the molecule as a
-whole. (Zero-flux condition)
+whole. (i.e. the zero-flux condition that applies to isolated
+molecules and crystals)
 
 All examples here are for water molecule (H2O).
 
@@ -58,33 +63,44 @@ Wolfram Engine is basically free for certain use, so there's much less
 to complain about concerning Wolfram Language as an implementation. A
 determined person can figure it out. :-)
 
+* Why not
+There are several excellent QTAIM packages available for production
+work. Ease of use, customization, and adjacency to featureful
+technical computing platform that has a wide spectrum of methods.
+
+This is not a project to do "production" QTAIM, but rather to explain
+what QTAIM is and make nice graphics, and a way to investigate easily
+some of the numerical issues that underpin it.  I always err on the
+side of slow and reliable.  If QTAIM.wl is useful for production, that
+is a collateral benefit.
+
 * Installation Notes
 ** MathLink Executable
 
-Note: This step is somewhat optional. WL routines are now enabled
-unless MathLink is installed.  Still required for WFN file import!
+Note: This step is somewhat optional, but still required for WFN file
+import!  TODO: write wfn2wfx.f90
 
-In order to use this code, you must/ought to build a MathLink executable. You
-then have to patch up the code to use it. An example, using MacPorts
-gfortran and MathLink's mcc in my PATH variable (I may have hacked mcc
-script in a couple places to first find gcc-mp-10, so it might not need -lgfortran):
+An example, using MacPorts gfortran and MathLink's mcc in my PATH
+variable (I may have hacked mcc script in a couple places to first
+find gcc-mp-11, so it might not need -lgfortran):
 
 #+BEGIN_SRC bash
   export PATH=/Applications/Mathematica.app/Contents/SystemFiles/Links/MathLink/DeveloperKit/MacOSX-x86-64/CompilerAdditions:${PATH}
-  gfortran-mp-10 -fopenmp -O3 -fPIC -c -o qtaim.o qtaim.f90
-  mcc -b64 qtaim.o qtaim.tm main.c -o qtaim
+  gfortran-mp-11 -O3 -fPIC -c -o qtaim.o qtaim.f90
+  mcc -b64 qtaim.o qtaim.tm main.c -o qtaim -lgfortran
 #+END_src
 
 on GNU/Linux, you may have to link gfortran:
 #+BEGIN_SRC bash
   # sudo apt install build-essential gcc g++ gfortran
-  gfortran -fopenmp -O3 -fPIC -c -o qtaim.o qtaim.f90
+  gfortran -O3 -fPIC -c -o qtaim.o qtaim.f90
   mcc qtaim.o qtaim.tm main.c -o qtaim -lgfortran
 #+END_src
 
 I would appreciate it if someone would provide instructions for
 windows, but I suspect they are similar.
 
+<<<<<<< HEAD
 All this is because the electron density and gradient evaluations are so
 plentiful and expensive, that they must be executed in a compiled
 language.
@@ -97,6 +113,21 @@ An advantage is that it is a mechanism for interfacing with other
 codes.  One simply needs to add C/Fortran code and write the interface
 like the example for *rho1*, /vide infra/.
 
+||||||| 9463391
+Akk this is because the electron density and gradient evaluations are so
+plentiful and expensive, that they must be executed in a compiled
+language.
+
+Another reason is that the WFN format is abundant and it's
+Fortran-formatted. So bite the bullet and have a Fortran/MathLink
+dependency.
+
+An advantage is that it is a mechanism for interfacing with other
+codes.  One simply needs to add C/Fortran code and write the interface
+like the example for rho1.
+
+=======
+>>>>>>> develop
 * Example Uses
 
 ** Wavefunctions
