@@ -2,13 +2,25 @@
 ** Disclaimer: This is experimental code, use at your own risk.
   
 ** Please note that this repository uses Git LFS.  You must:
-   
+
 #+BEGIN_SRC bash
-  # git lfs init
+  git lfs clone https://ericcbrown.com/ecbrown/QTAIM.wl.git
+#+END_src
+
+or
+
+#+BEGIN_SRC bash
   git lfs clone https://github.com/ecbrown/QTAIM.wl.git
 #+END_src
 
 * News
+  - 1.2.0 Released (Code name "u know u want it")
+  - Atomic Surface Delineation
+  - Spherical Polar Integration
+  - Parallel Integration Techiques
+  - Cerjan-Miller-Baker approach to location of critical points
+  
+* Old News
   - 1.1.0 Released (Code name "Mulligan")
   - This project's [[https://community.wolfram.com/groups/-/m/t/2305648][announcement]] was a staff pick on Wolfram's
     community forum!
