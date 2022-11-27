@@ -1,0 +1,10 @@
+<pre name='i_25_in' id='i_25_in' class='IFT'>SliceContourPlot3D[
+ \[Rho][w, {x, y, z}],
+ &quot;CenterPlanes&quot;,
+ {x, -5, 5},
+ {y, -5, 5},
+ {z, -5, 5},
+ AxesLabel -&gt; {&quot;x&quot;, &quot;y&quot;, &quot;z&quot;},
+ Contours -&gt; $QTAIMContoursPositive
+ , ColorFunction -&gt; &quot;PearlColors&quot;
+ , ColorFunctionScaling -&gt; True]</pre><div class='IFU'><a name='677890534'></a>http://wolfram.com/xid/0b5iesgd1njgo3dmh3dthbwuihmkahmi-lhvtyw</div>

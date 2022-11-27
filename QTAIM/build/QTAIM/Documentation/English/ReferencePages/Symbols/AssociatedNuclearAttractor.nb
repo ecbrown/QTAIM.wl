@@ -1,0 +1,552 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20219,        543]
+NotebookOptionsPosition[     13931,        405]
+NotebookOutlinePosition[     15856,        454]
+CellTagsIndexPosition[     15813,        451]
+WindowTitle->AssociatedNuclearAttractor
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["Q T A I M SYMBOL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }]],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->False], {"\<\"QTAIM/ref/AssociatedNuclearAttractor\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["QTAIM/ref/AssociatedNuclearAttractor"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/QTAIM/ref/\
+AssociatedNuclearAttractor.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$10878], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "QTAIM/ref/AssociatedNuclearAttractor", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell["AssociatedNuclearAttractor", "ObjectName"],
+ Cell[BoxData[
+  TemplateBox[{8},
+   "Spacer1"]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"AssociatedNuclearAttractor", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]AssociatedNuclearAttractor"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {{None}}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    TemplateBox[{6},
+     "Spacer1"]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->96078510],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[StyleBox["Needs[\"QTAIM`\"];", "Code"]], "Code",
+ CellLabel->"In[10]:=",
+ CellID->1846042787],
+
+Cell["Load the wavefunction for a molecule:", "ExampleText",
+ CellID->1798111171],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"w", "=", 
+    RowBox[{
+    "ReadWavefunctionFromWFX", "[", 
+     "\"\<https://ericcbrown.com/QTAIM/wfx/pyridine.wfx\>\"", "]"}]}], ";"}]],
+   "Input"],
+ "\nlink=Install[\"/Users/ecbrown/src/QTAIM.wl/QTAIM/QTAIM/read_wfn\"];"
+}], "Code",
+ CellLabel->"In[13]:=",
+ CellID->454875113],
+
+Cell[TextData[StyleBox["ElectronDensityDerivative[\nwfn_,\n\
+{x_?NumericQ,y_?NumericQ,z_?NumericQ},{nx_?IntegerQ,ny_?IntegerQ,nz_?IntegerQ}\
+]:=Module[\n\
+{nmo=wfn[\"NumberOfOccupiedMolecularOrbitals\"],np=wfn[\"NumberOfPrimitives\"]\
+,l=wfn[\"l\"],xp=wfn[\"xp\"],yp=wfn[\"yp\"],zp=wfn[\"zp\"],a=wfn[\"\
+PrimitiveExponents\"],o=wfn[\"MolecularOrbitalOccupationNumbers\"],c=Flatten[\
+wfn[\"MolecularOrbitalPrimitiveCoefficients\"]],link,res},res=rho1[nmo,np,x,y,\
+z,nx,ny,nz,xp,yp,zp,l[[All,1]],l[[All,2]],l[[All,3]],a,c,o];\nres];\n\
+ElectronDensityDerivative[\nwfn_,\n\
+{x_?NumericQ,y_?NumericQ,z_?NumericQ},deriv_?MatrixQ]:=Module[\n\
+{nmo=wfn[\"NumberOfOccupiedMolecularOrbitals\"],np=wfn[\"NumberOfPrimitives\"]\
+,l=wfn[\"l\"],xp=wfn[\"xp\"],yp=wfn[\"yp\"],zp=wfn[\"zp\"],a=wfn[\"\
+PrimitiveExponents\"],o=wfn[\"MolecularOrbitalOccupationNumbers\"],c=Flatten[\
+wfn[\"MolecularOrbitalPrimitiveCoefficients\"]],link,res},\nres=Table[\n\
+rho1[nmo,np,x,y,z,deriv[[d,1]],deriv[[d,2]],deriv[[d,3]],xp,yp,zp,l[[All,1]],\
+l[[All,2]],l[[All,3]],a,c,o]\n,{d,1,Length[deriv]}];\nres\n];\n\
+ElectronDensityDerivative[\nwfn_,\n\
+xyz_?MatrixQ,{nx_?IntegerQ,ny_?IntegerQ,nz_?IntegerQ}]:=Module[\n\
+{nmo=wfn[\"NumberOfOccupiedMolecularOrbitals\"],np=wfn[\"NumberOfPrimitives\"]\
+,l=wfn[\"l\"],xp=wfn[\"xp\"],yp=wfn[\"yp\"],zp=wfn[\"zp\"],a=wfn[\"\
+PrimitiveExponents\"],o=wfn[\"MolecularOrbitalOccupationNumbers\"],c=Flatten[\
+wfn[\"MolecularOrbitalPrimitiveCoefficients\"]],link,res},\nres=Table[\n\
+rho1[nmo,np,xyz[[nn,1]],xyz[[nn,2]],xyz[[nn,3]],nx,ny,nz,xp,yp,zp,l[[All,1]],\
+l[[All,2]],l[[All,3]],a,c,o]\n,{nn,1,Length[xyz]}];\nres\n];\n\
+ElectronDensityDerivative[\nwfn_,\nxyz_?MatrixQ,deriv_?MatrixQ]:=Module[\n\
+{nmo=wfn[\"NumberOfOccupiedMolecularOrbitals\"],np=wfn[\"NumberOfPrimitives\"]\
+,l=wfn[\"l\"],xp=wfn[\"xp\"],yp=wfn[\"yp\"],zp=wfn[\"zp\"],a=wfn[\"\
+PrimitiveExponents\"],o=wfn[\"MolecularOrbitalOccupationNumbers\"],c=Flatten[\
+wfn[\"MolecularOrbitalPrimitiveCoefficients\"]],link,res},\nres=Table[\n\
+Table[\nrho1[nmo,np,xyz[[nn,1]],xyz[[nn,2]],xyz[[nn,3]],deriv[[d,1]],deriv[[d,\
+2]],deriv[[d,3]],xp,yp,zp,l[[All,1]],l[[All,2]],l[[All,3]],a,c,o]\n\
+,{d,1,Length[deriv]}]\n,{nn,1,Length[xyz]}];\nres\n];", "Code"]], "Code",
+ CellLabel->"In[15]:=",
+ CellID->65439804],
+
+Cell["Locate nuclear critical points:", "ExampleText",
+ CellID->881273133],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["ncps=LocateNuclearCriticalPoints[w];\nncps // Chop // \
+TableForm", "Code"]], "Code",
+ CellLabel->"In[19]:=",
+ CellID->1208084169],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FindMaximum", "lstol", 
+   "\"The line search decreased the step size to within the tolerance \
+specified by AccuracyGoal and PrecisionGoal but was unable to find a \
+sufficient increase in the function. You may need more than \\!\\(\\*RowBox[{\
+\\\"MachinePrecision\\\"}]\\) digits of working precision to meet these \
+tolerances.\"", 2, 19, 1, 22974242495758335027, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[19]:=",
+ CellID->1871544798],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", "0", "2.6786694676417735`"},
+    {"0", "0", 
+     RowBox[{"-", "2.6125995419442023`"}]},
+    {"0", "2.153482872251086`", "1.3613368166146094`"},
+    {"0", 
+     RowBox[{"-", "2.153482872251086`"}], "1.3613368166146094`"},
+    {"0", 
+     RowBox[{"-", "2.259271283378176`"}], 
+     RowBox[{"-", "1.268583170147056`"}]},
+    {"0", "2.259271283378176`", 
+     RowBox[{"-", "1.268583170147056`"}]},
+    {"0", "0", 
+     RowBox[{"-", "4.628749509794581`"}]},
+    {"0", "3.857944756947658`", "2.4475394220172926`"},
+    {"0", 
+     RowBox[{"-", "3.857944756947658`"}], "2.4475394220172926`"},
+    {"0", 
+     RowBox[{"-", "4.039227409766525`"}], 
+     RowBox[{"-", "2.212722863040093`"}]},
+    {"0", "4.039227409766525`", 
+     RowBox[{"-", "2.212722863040093`"}]}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellLabel->"Out[20]//TableForm=",
+ CellID->860442377]
+}, Open  ]],
+
+Cell["\<\
+Identify nuclear critical point that is associated with a point in space:\
+\>", "ExampleText",
+ CellID->1698735680],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["AssociatedNuclearAttractor[w, ncps, {0.,0.,-2.5}]\n\
+AssociatedNuclearAttractor[w, ncps, {0.,0.,-2.4}]", "Code"]], "Code",
+ CellLabel->"In[30]:=",
+ CellID->674884812],
+
+Cell[BoxData["2"], "Output",
+ CellLabel->"Out[30]=",
+ CellID->856700421],
+
+Cell[BoxData["2"], "Output",
+ CellLabel->"Out[31]=",
+ CellID->1833606259]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["AssociatedNuclearAttractor[w, ncps, {0.,0.,0.}]", \
+"Code"]], "Code",
+ CellLabel->"In[32]:=",
+ CellID->1239549379],
+
+Cell[BoxData["2"], "Output",
+ CellLabel->"Out[32]=",
+ CellID->234274243]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["AssociatedNuclearAttractor[w, ncps, {0.,0.,-8}]", \
+"Code"]], "Code",
+ CellLabel->"In[33]:=",
+ CellID->613750664],
+
+Cell[BoxData["7"], "Output",
+ CellLabel->"Out[33]=",
+ CellID->515261263]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["AssociatedNuclearAttractor[w, ncps, {0., 8,-8}]", \
+"Code"]], "Code",
+ CellLabel->"In[34]:=",
+ CellID->1544394005],
+
+Cell[BoxData["0"], "Output",
+ CellLabel->"Out[34]=",
+ CellID->1361537197]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["AssociatedNuclearAttractor[w, ncps, {0.,-8, 8}]", \
+"Code"]], "Code",
+ CellLabel->"In[35]:=",
+ CellID->1595001547],
+
+Cell[BoxData["0"], "Output",
+ CellLabel->"Out[35]=",
+ CellID->170936293]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["AssociatedNuclearAttractor[w, ncps, {0., 8, 8}]", \
+"Code"]], "Code",
+ CellLabel->"In[36]:=",
+ CellID->1853978861],
+
+Cell[BoxData["0"], "Output",
+ CellLabel->"Out[36]=",
+ CellID->1277939858]
+}, Open  ]],
+
+Cell["Delineate the atomic basin for Nitrogen:", "ExampleText",
+ CellID->587726887],
+
+Cell[TextData[{
+ "rp=RegionPlot[\n",
+ StyleBox["AssociatedNuclearAttractor[w, ncps, {0., y, z}] == 1,", "Code"],
+ "\n{y, -8, 8},\n{z, -8, 8}\n]"
+}], "Code",
+ CellLabel->"In[38]:=",
+ CellID->1184657579],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Show[\nGraphics[\n  Table[\n   Disk[ncps[[i,{2,3}]], \
+0.1*(w[\"AtomicNumbers\"])[[i]] ],\n    {i, 1, Length[ncps]}]\n],\nrp\n]", \
+"Code"]], "Code",
+ CellLabel->"In[9]:=",
+ CellID->447051974],
+
+Cell[BoxData[
+ GraphicsBox[{
+   DiskBox[{-9.613684454896395*^-23, 2.6786694676424747}, 0.7000000000000001],
+    DiskBox[{-3.605652127804591*^-22, -2.6125995419442023}, 
+    0.6000000000000001], 
+   DiskBox[{2.153482872251086, 1.3613368166146094}, 0.6000000000000001], 
+   DiskBox[{-2.153482872251086, 1.3613368166146094}, 0.6000000000000001], 
+   DiskBox[{-2.259271283378176, -1.268583170147056}, 0.6000000000000001], 
+   DiskBox[{2.259271283378176, -1.268583170147056}, 0.6000000000000001], 
+   DiskBox[{1.450912424699087*^-20, -4.628749509794581}, 0.1], 
+   DiskBox[{3.857944756947658, 2.4475394220172926}, 0.1], 
+   DiskBox[{-3.857944756947658, 2.4475394220172926}, 0.1], 
+   DiskBox[{-4.039227409766525, -2.212722863040093}, 0.1], 
+   DiskBox[{4.039227409766525, -2.212722863040093}, 0.1]}]], "Output",
+ CellLabel->"Out[9]=",
+ CellID->1324264648]
+}, Open  ]],
+
+Cell["Delineate the atomic basin for Nitrogen:", "ExampleText",
+ CellID->596311742],
+
+Cell[TextData[{
+ "rp3=RegionPlot3D[\n",
+ StyleBox["AssociatedNuclearAttractor[w, ncps, {x, y, z}] == 1,", "Code"],
+ "\n{x, -10, 10},\n{y, -10, 10},\n{z, -10, 10}\n]"
+}], "Code",
+ CellID->1934010162],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Show[\nGraphics3D[\n  Table[\n   Sphere[ncps[[i]], \
+0.1*w[\"AtomicNumbers\"][[i]] ],\n    {i, 1, Length[ncps]}]\n],\nrp3\n]", \
+"Code"]], "Code",
+ CellLabel->"In[6]:=",
+ CellID->1704729812],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   SphereBox[{1.094913021286112*^-22, -9.613684454896395*^-23, 
+    2.6786694676424747`}, 0.7000000000000001], 
+   SphereBox[{-2.0026440735365385`*^-22, -3.605652127804591*^-22, \
+-2.6125995419442023`}, 0.6000000000000001], 
+   SphereBox[{-1.8408569614138724`*^-22, 2.153482872251086, 
+    1.3613368166146094`}, 0.6000000000000001], 
+   SphereBox[{-2.6372610380226786`*^-16, -2.153482872251086, 
+    1.3613368166146094`}, 0.6000000000000001], 
+   SphereBox[{
+    2.0791064347356486`*^-22, -2.259271283378176, -1.268583170147056}, 
+    0.6000000000000001], 
+   SphereBox[{2.766813190652506*^-16, 2.259271283378176, -1.268583170147056}, 
+    0.6000000000000001], 
+   SphereBox[{-2.768337748767447*^-20, 
+    1.450912424699087*^-20, -4.628749509794581}, 0.1], 
+   SphereBox[{-1.7342470339057366`*^-19, 3.857944756947658, 
+    2.4475394220172926`}, 0.1], 
+   SphereBox[{-4.717943406385127*^-16, -3.857944756947658, 
+    2.4475394220172926`}, 0.1], 
+   SphereBox[{3.894917406223963*^-20, -4.039227409766525, -2.212722863040093},
+     0.1], SphereBox[{4.938298149913756*^-16, 
+    4.039227409766525, -2.212722863040093}, 0.1]}]], "Output",
+ CellLabel->"Out[6]=",
+ CellID->1829094330]
+}, Open  ]]
+}, Closed]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"AssociatedNuclearAttractor",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:QTAIM/guide/QTAIM", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2021, 7, 28, 17, 32, 1.645611}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "QTAIM`", "keywords" -> {},
+     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> 
+    True, "label" -> "Q T A I M Symbol", "language" -> "en", "paclet" -> 
+    "QTAIM", "status" -> "None", "summary" -> 
+    "AssociatedNuclearAttractor[] AssociatedNuclearAttractor", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "AssociatedNuclearAttractor", "titlemodifier" -> "", "windowtitle" -> 
+    "AssociatedNuclearAttractor", "type" -> "Symbol", "uri" -> 
+    "QTAIM/ref/AssociatedNuclearAttractor", "WorkflowDockedCell" -> ""}, 
+  "SearchTextTranslated" -> "", "NewStyles" -> False},
+CellContext->"Global`",
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 19, 2021)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "12.3 for Mac OS X x86 (64-bit) (June 19, 2021)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[598, 21, 2333, 53, 70, "AnchorBarGrid",ExpressionUUID->"60889036-f612-4061-ad89-f17831d7a916",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2956, 78, 183, 6, 70, "ObjectNameGrid",ExpressionUUID->"1f3c9624-b9ff-4520-9537-43d31141f3e6"],
+Cell[3142, 86, 321, 9, 70, "Usage",ExpressionUUID->"eae49b05-220d-4c5e-b4a5-c562f4fe6df3",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3500, 100, 628, 19, 70, "NotesSection",ExpressionUUID->"851d0d19-4f17-4273-9b02-e64ca4cf1611",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->96078510],
+Cell[4131, 121, 31, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"4310bd1d-47ca-483b-b077-e29126a3c670"],
+Cell[4165, 123, 107, 2, 70, "Code",ExpressionUUID->"0e9c3295-a5f0-46ce-b492-a1957d53b304",
+ CellID->1846042787],
+Cell[4275, 127, 81, 1, 70, "ExampleText",ExpressionUUID->"24bcc2a8-9d98-4653-9ec2-f81ee2a28331",
+ CellID->1798111171],
+Cell[4359, 130, 334, 11, 70, "Code",ExpressionUUID->"1a604474-61fb-4c30-a6ef-18a33d745dc8",
+ CellID->454875113],
+Cell[4696, 143, 2275, 33, 70, "Code",ExpressionUUID->"d3cb6ef5-49e6-489e-82fb-6f3144f42aa7",
+ CellID->65439804],
+Cell[6974, 178, 74, 1, 70, "ExampleText",ExpressionUUID->"df018ccc-2162-41e6-bd1e-61552541de4c",
+ CellID->881273133],
+Cell[CellGroupData[{
+Cell[7073, 183, 154, 3, 70, "Code",ExpressionUUID->"a8249359-d9b8-4eb3-be4d-8416ec238642",
+ CellID->1208084169],
+Cell[7230, 188, 516, 10, 70, "Message",ExpressionUUID->"1b4c7277-aeeb-4e44-b355-a19ebc6f0778",
+ CellID->1871544798],
+Cell[7749, 200, 1226, 35, 70, "Output",ExpressionUUID->"aa77d13e-a776-4a3c-8551-889ae4298a67",
+ CellID->860442377]
+}, Open  ]],
+Cell[8990, 238, 125, 3, 70, "ExampleText",ExpressionUUID->"dcad735a-8bca-4223-b8e1-d2bb8540fe5b",
+ CellID->1698735680],
+Cell[CellGroupData[{
+Cell[9140, 245, 190, 3, 70, "Code",ExpressionUUID->"d1d5938e-7579-4dc7-96f1-92316e6d98f6",
+ CellID->674884812],
+Cell[9333, 250, 72, 2, 70, "Output",ExpressionUUID->"caefa4fb-1c1f-4a34-af31-ceabcbe6a638",
+ CellID->856700421],
+Cell[9408, 254, 73, 2, 70, "Output",ExpressionUUID->"4c5d2812-1470-4bf9-9a47-cec3f7c06c84",
+ CellID->1833606259]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9518, 261, 138, 3, 70, "Code",ExpressionUUID->"198e3614-5dab-4550-b708-f779fb551139",
+ CellID->1239549379],
+Cell[9659, 266, 72, 2, 70, "Output",ExpressionUUID->"e70ef4e8-a8d0-45ec-8057-9d4d8f7e2dca",
+ CellID->234274243]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9768, 273, 137, 3, 70, "Code",ExpressionUUID->"b886ff55-403b-4c91-9edd-59a0b268efad",
+ CellID->613750664],
+Cell[9908, 278, 72, 2, 70, "Output",ExpressionUUID->"bca1c425-91e9-437a-ba08-3853ebf66960",
+ CellID->515261263]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10017, 285, 138, 3, 70, "Code",ExpressionUUID->"e4cf5179-7e58-405e-8a98-bac01c3fac1c",
+ CellID->1544394005],
+Cell[10158, 290, 73, 2, 70, "Output",ExpressionUUID->"b3ceaac1-2d9c-4d87-9aee-91b350905322",
+ CellID->1361537197]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10268, 297, 138, 3, 70, "Code",ExpressionUUID->"3c29fdcf-7a5d-49b5-8745-a229b3d2571a",
+ CellID->1595001547],
+Cell[10409, 302, 72, 2, 70, "Output",ExpressionUUID->"6f62e312-cf49-408f-bca9-6917be2856e8",
+ CellID->170936293]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10518, 309, 138, 3, 70, "Code",ExpressionUUID->"f3d3e074-b56c-4c1a-b05f-56a41e1bf180",
+ CellID->1853978861],
+Cell[10659, 314, 73, 2, 70, "Output",ExpressionUUID->"f3a77dbd-86b0-4682-bee6-6cfca32b9e49",
+ CellID->1277939858]
+}, Open  ]],
+Cell[10747, 319, 83, 1, 70, "ExampleText",ExpressionUUID->"922f5da0-67fa-431d-adc3-537e65258dcd",
+ CellID->587726887],
+Cell[10833, 322, 201, 6, 70, "Code",ExpressionUUID->"a0972c03-aac3-4444-9d24-adaf31b47823",
+ CellID->1184657579],
+Cell[CellGroupData[{
+Cell[11059, 332, 216, 4, 70, "Code",ExpressionUUID->"7f723506-6653-43b1-bdba-291ca163fec1",
+ CellID->447051974],
+Cell[11278, 338, 850, 15, 70, "Output",ExpressionUUID->"5f993e5e-4dd2-4ae4-8671-2c96198ddce5",
+ CellID->1324264648]
+}, Open  ]],
+Cell[12143, 356, 83, 1, 70, "ExampleText",ExpressionUUID->"8b3315b6-ba49-4689-9241-b95df3ca1547",
+ CellID->596311742],
+Cell[12229, 359, 198, 5, 70, "Code",ExpressionUUID->"cf3121dc-c469-4eef-ade7-1110e234b53e",
+ CellID->1934010162],
+Cell[CellGroupData[{
+Cell[12452, 368, 214, 4, 70, "Code",ExpressionUUID->"b0e708c3-b060-43d2-90cb-0f549588662b",
+ CellID->1704729812],
+Cell[12669, 374, 1208, 25, 70, "Output",ExpressionUUID->"a5d3a240-5dad-4bc0-87f4-d532ef80dc2c",
+ CellID->1829094330]
+}, Open  ]]
+}, Closed]],
+Cell[13904, 403, 23, 0, 70, "FooterCell",ExpressionUUID->"78195d39-5015-4247-a7a6-b900380a0a0d"]
+}
+]
+*)
+
+(* End of internal cache information *)

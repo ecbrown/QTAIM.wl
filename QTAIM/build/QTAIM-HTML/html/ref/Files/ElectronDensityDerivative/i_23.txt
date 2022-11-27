@@ -1,0 +1,8 @@
+<pre name='i_23_in' id='i_23_in' class='IFT'>ContourPlot[
+ \[Rho][{0, y, z}],
+ {y, -8, 8},
+ {z, -8, 8},
+ Contours -&gt; $QTAIMContours,
+ PlotRange -&gt; All
+ , ColorFunction -&gt; &quot;Pastel&quot;
+ , ColorFunctionScaling -&gt; False]</pre><div class='IFU'><a name='1971386668'></a>http://wolfram.com/xid/08cuvarart8wxvo6tv9u8y2tu-6vzxy2</div>

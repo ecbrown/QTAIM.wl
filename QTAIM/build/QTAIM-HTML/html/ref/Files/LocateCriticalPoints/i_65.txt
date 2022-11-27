@@ -1,0 +1,1 @@
+<pre name='i_65_in' id='i_65_in' class='IFT'>First@ElectronDensityDerivative[w, {0., 0., 0.}, {{0, 0, 0}}]</pre><div class='IFU'><a name='1283701816'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-vikgx2</div>

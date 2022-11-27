@@ -1,0 +1,3 @@
+<pre name='i_19_in' id='i_19_in' class='IFT'>Quiet[
+ ElectronDensityDerivative[w, {0., 0., 0}, {0, 0, 0}],
+ {General::munfl}]</pre><div class='IFU'><a name='1006386152'></a>http://wolfram.com/xid/0b5iesgd1njgo3dmh3dthbwuihmkahmi-qxgms6</div>

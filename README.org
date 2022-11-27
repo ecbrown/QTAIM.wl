@@ -1,0 +1,268 @@
+* Notes
+** Disclaimer: This is experimental code, use at your own risk.
+  
+* News
+  - Repository now using regular Git (instead of git-lfs).  Please check out again.
+
+  - 1.3.0 Released (Code name "Triskaidekaphobia")
+  - Update for Mathematica 13.1 
+  - Update macOS instructions for ARM (M1, M2, etc.) 
+  
+* Old News
+  - 1.2.0 Released (Code name "u know u want it")
+  - Atomic Surface Delineation
+  - Spherical Polar Integration
+  - Parallel Integration Techiques
+  - Cerjan-Miller-Baker approach to location of critical points
+
+  - 1.1.0 Released (Code name "Mulligan")
+  - This project's [[https://community.wolfram.com/groups/-/m/t/2305648][announcement]] was a staff pick on Wolfram's
+    community forum!
+  - Primitive Cutoffs in Mathematica-compiled versions (competitive
+    with Fortran, so Fortran routines removed)
+  - Parallel routines for integration
+  - Bond Path Styles, dashed/dotted based on Laplacian
+  - Beta Sphere Tuning
+  - Drastic simplification of the API, moving routines into QTAIM.m
+  - Plots use rectilinear aspect ratio
+  - Better design of bounding box, allowing for easier adjustment and
+    propagation by making a variable
+  - Improved coloring of critical points
+
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/qtaim-graphics-collage.png?raw=true]]
+  
+* What
+
+Wolfram Language (Mathematica) Package for computations involving the
+Quantum Theory of Atoms In Molecules (QTAIM)
+
+Q. Are atoms discernible in molecules? 
+
+A. Yes, an atom can be defined as the union of steepest ascent
+gradient paths through the electron density, and its attractor. These
+atoms are individually proper quantum systems exhibiting the same
+boundary conditions that are applied to the molecule as a
+whole. (i.e. the zero-flux condition that applies to isolated
+molecules and crystals)
+
+All examples here are for water molecule (H2O).
+
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/atoms-are-defined-as-the-union-of-gradient-paths-and-attractor.png?raw=true]]]]
+
+
+* Why
+
+I have always wanted a high-level Mathematica interface to
+commonly-performed QTAIM tasks. This is for both research and teaching
+purposes, especially creating highly customized graphics.
+
+Two anticipated use cases are: 1) Teaching QTAIM background and methods
+ and 2) generating annotated graphics. QTAIM.wl is the bridge 
+between QTAIM-computed quantities and the Mathematica ecosystem.
+
+A key characteristic of Mathematica is that can create very high
+quality graphics and in such a way that they are adaptively sampled,
+in the space of a graphics routine, i.e. Cartesian, rather than
+e.g. spherical polar grids. This reduces a certain kind of artifact
+that I often see. (Though this can be done when appropriate.)
+
+Also, Wolfram Language/Mathematica has a nice graphics grammar, that
+make composing tailored graphics easy and the results are nice.
+
+Wolfram Engine is basically free for certain use, so there's much less
+to complain about concerning Wolfram Language as an implementation. A
+determined person can figure it out. :-)
+
+* Why not
+This is not a project to do "production" QTAIM, but rather to explain
+what QTAIM is and make nice graphics, and a way to investigate easily
+some of the numerical issues that underpin it.  I always err on the
+side of slow and reliable.  If QTAIM.wl is useful for production, that
+is a collateral benefit.
+
+An example of something that I am interested in is comparing ODE methods 
+for steepest-ascent paths.
+Mathematica has a broad suite of ODE algorithms that have the same interface.
+
+* Installation Notes
+** MathLink Executable
+
+Note: This step is somewhat optional, but still required for WFN file
+import!  TODO: write wfn2wfx.f90.   Also, there are a number of ways around this,
+including molden2aim.
+
+An example, using MacPorts gfortran and MathLink's mcc in my PATH
+variable (I may have hacked mcc script in a couple places to first
+find gcc-mp-12, so it might not need -lgfortran):
+
+#+BEGIN_SRC bash
+  export PATH=/Applications/Mathematica.app/Contents/SystemFiles/Links/MathLink/DeveloperKit/MacOSX-ARM64/CompilerAdditions:${PATH}
+  gfortran-mp-12 -O3 -fPIC -c -o qtaim.o qtaim.f90
+  mcc -n qtaim.o qtaim.tm main.c -o qtaim -lgfortran
+#+END_src
+
+on GNU/Linux, you may have to link gfortran:
+#+BEGIN_SRC bash
+  # sudo apt install build-essential gcc g++ gfortran
+  gfortran -O3 -fPIC -c -o qtaim.o qtaim.f90
+  mcc -b64 qtaim.o qtaim.tm main.c -o qtaim -lgfortran
+#+END_src
+
+I would appreciate it if someone would provide instructions for
+windows, but I suspect they are similar.
+
+All this is because the electron density and gradient evaluations are so
+plentiful and expensive, that they must be executed in a compiled
+language.
+
+Another reason is that the WFN format is of at least historical interest and it's
+Fortran-formatted. So here bite the bullet and have a Fortran/MathLink
+dependency.
+
+An advantage is that it is a mechanism for interfacing with other
+codes.  One simply needs to add C/Fortran code and write the interface
+like the example for *rho1*, /vide infra/.
+
+Akk this is because the electron density and gradient evaluations are so
+plentiful and expensive, that they must be executed in a compiled
+language.
+
+Another reason is that the WFN format is abundant and it's
+Fortran-formatted. So bite the bullet and have a Fortran/MathLink
+dependency.
+
+An advantage is that it is a mechanism for interfacing with other
+codes.  One simply needs to add C/Fortran code and write the interface
+like the example for rho1.
+
+* Example Uses
+
+** Wavefunctions
+   - WFX, WFN import
+   - PySCF (examples give full-valence CASSCF of water)
+#+BEGIN_SRC bash
+  pip install pyscf
+  pip install pyscf[geomopt]
+  ...
+#+END_src
+  
+** Electron Density of Water (Center Planes)
+
+   Mathematica 12 has beautiful slice plots:
+   
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/center-planes-of-water-electron-density.png?raw=true]]
+
+
+** Locate Nuclear Critical Points (and Plot Them)
+   The first task is locate the nuclear critical points:
+   
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/nuclear-critical-points-of-water.png?raw=true]]
+
+** Locate Bond Critical Points (and Plot Them)
+   The second task is locate the bond critical points. This uses a
+   graphical technique inside of Mathematica. There are no heuristics.
+   
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/bond-critical-points-of-water.png?raw=true]]
+
+
+** Electron Density of Water (Contour Plot)
+
+  Symmetrical molecules contain a lot of information along planes.
+   
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/contour-plot-of-electron-density-of-water.png?raw=true]]
+
+
+** Electron Density of Water (Contour Plot)
+
+  It is easy to compose images with different quantities. The bond
+  paths shown in the 3D model above can be projected onto the plane:
+   
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/contour-plot-of-electron-density-of-water-with-bond-paths.png?raw=true]]
+
+
+** Electron Density Gradient of Water (Stream Plots)
+
+   In the QTAIM, atoms are defined by regions of space that are the
+   union of all steepest ascent paths through the electron density and
+   the attractor.
+   
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/stream-plot-of-electron-density-gradient-of-water.png?raw=true]]
+
+and composite:
+
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/stream-plot-contour-plot-of-electron-density-gradient-of-water.png?raw=true]]
+
+and in 3D:
+
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/stream-plot-3d-of-electron-density-gradient-of-water.png?raw=true]]
+
+** (Negative of) Laplacian of Electron Density
+
+   "Lone Pairs" of electrons can be located by finding maxima in the
+   negative of the Laplacian of the electron density.  A feature of
+   QTAIM.wl is that is uses the same techniques to find critical
+   points in the Laplacian as it does in the electron density.
+
+   
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/slice-contour-plot-3d-of-electron-density-laplacian-of-water.png?raw=true]]
+
+and the plane that shows the pile-up in pink, above and below the plane which protrudes toward the viewer in the 3D version:
+
+[[https://github.com/ecbrown/QTAIM.wl/blob/master/resource/contour-plot-of-laplacian-of-electron-density-of-water.png?raw=true]]
+
+** Atomic Basin Delineation
+   
+** Atomic Integration 
+
+
+   
+* Noteworthy Features, Novelties, and other Curiosities (Incomplete Laundry List)
+  - [[https://aoterodelaroza.github.io/critic2][Critic2]] / AIMAll / MultiWFN etc. are great and I recommend these
+    results be checked against them
+  - Infinite-order analytical partial derivatives based on two
+    applications of Leibniz Product Rule of Cartesian GTOs. The best
+    way to find roots is with Hessian information.  Since the
+    Laplacian of the electron density already needs second
+    derivatives, its Hessian needs fourth order derivatives! This is
+    too high a derivative to hand code, and everything here is very
+    stiff for numerical differentiation.  Written in Modern Fortran.
+  - Molecular graphs are computed using "J.M."'s StackExchange for 3D
+    critical point location. This technique generalizes to fields for
+    which there may not be heuristics for searching, e.g. bond paths
+    between two nuclear critical points.  This includes the Laplacian
+    field, as well all other imaginable, such as Kinetic Energy
+    Density topology.
+  - Data generated adaptively depending on task.  Eschews precomputed
+    grids.
+  - Adams-Bashforth-Moulton (ABM) integrator with variable order/step
+    due to Shampine and Watts (DEABM).  We already know these are
+    going start or are going to get stiff, so even better than
+    Doermand-Prince.  Need to verify this since tuning beta spheres.
+  - Mathematica's infinite possibilities for styling graphics,
+    scripting, orchestrating, extending, and exploring
+  - Parallelization opportunities abound because its easy to
+    subdivide a number of these methods into subregions and then
+    combine. (Split-Apply-Combine over different computer architectures!)
+  - Written in a language that is rich with "scientific methods"
+    e.g. has e.g. Hermite Polynomials built-in.
+  - I can't tell if this package is slow, or just that accurate images
+    without jagged edges just take a long time to compute. Note that
+    parallelization may be found at the frame/configuration/atom level
+    as well, it does not have to be serial.  Again just getting this
+    stood up, many order-saving optimizations to come.
+  - Other packages for QTAIM exist and they can be interfaced
+    e.g. through files and/or linking.  These functions should work
+    with interpolated functions as well.  I am currently investigating
+    how [[https://aoterodelaroza.github.io/critic2][Critic2]]'s results can be utilized.  Its routines cover
+    additional domains such as solid state and this package could be
+    "just graphics" in certain cases.
+
+* Contact
+
+  Please send suggestions/comments to:
+
+  Eric Brown ecbrown@ericcbrown.com
+
+  or open an issue. I am especially interested in new chemistry that
+  you would like to share either as early ideas or results you want to
+  showcase in notebook form.

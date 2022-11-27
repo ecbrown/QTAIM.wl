@@ -1,0 +1,9 @@
+<pre name='i_27_in' id='i_27_in' class='IFT'>AbsoluteTiming[
+ NIntegrate[
+  \[Rho][{x, y, z}],
+  {x, -10, 10},
+  {y, -10, 10},
+  {z, -10, 10},
+  Method -&gt; {Automatic, &quot;SymbolicProcessing&quot; -&gt; 0}
+  , AccuracyGoal -&gt; 2, PrecisionGoal -&gt; Infinity]
+ ]</pre><div class='IFU'><a name='475835038'></a>http://wolfram.com/xid/0cxz4ls8qypn9fr4f952zlkbyc7kk-h5k2x8</div>

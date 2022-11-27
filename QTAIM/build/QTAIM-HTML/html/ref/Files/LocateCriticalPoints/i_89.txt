@@ -1,0 +1,37 @@
+<pre name='i_89_in' id='i_89_in' class='IFT'>grxl[{x_?NumericQ, y_?NumericQ, z_?NumericQ}] := 
+  Total[ElectronDensityDerivative[w, {x, y, z}, 
+    {
+     {3, 0, 0},
+     {1, 2, 0},
+     {1, 0, 2}
+     }]];
+gryl[{x_?NumericQ, y_?NumericQ, z_?NumericQ}] := 
+  Total[ElectronDensityDerivative[w, {x, y, z}, 
+    {
+     {2, 1, 0},
+     {0, 3, 0},
+     {0, 1, 2}
+     }]];
+grzl[{x_?NumericQ, y_?NumericQ, z_?NumericQ}] := 
+  Total[ElectronDensityDerivative[w, {x, y, z}, 
+    {
+     {2, 0, 1},
+     {0, 2, 1},
+     {0, 0, 3}
+     }]];
+(*
+H[{x_?NumericQ,y_?NumericQ,z_?NumericQ}]:=Module[
+{h},
+h=ElectronDensityDerivative[w,{x,y,z}, 
+{{2,0,0}, {1,1,0},{1,0,1},
+{1,1,0},{0,2,0},{0,1,1},
+{1,0,1},{0,1,1},{0,0,2}}
+];
+{
+{h[[1]],h[[2]],h[[3]]},
+{h[[4]], h[[5]],h[[6]]},
+{h[[7]],h[[8]],h[[9]]}
+}
+];
+*)
+</pre><div class='IFU'><a name='257481748'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-ejk0g2</div>

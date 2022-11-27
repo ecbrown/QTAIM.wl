@@ -1,0 +1,13 @@
+<pre name='i_17_in' id='i_17_in' class='IFT'>AbsoluteTiming[
+ cps = LocateCriticalPoints[
+   w,
+   {
+    grx[{x, y, z}],
+    gry[{x, y, z}],
+    grz[{x, y, z}]
+    },
+   H[{x, y, z}],
+   {x, -8, 8},
+   {y, -8, 8},
+   {z, -8, 8}]
+ ]</pre><div class='IFU'><a name='585976550'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-jy5soo</div>

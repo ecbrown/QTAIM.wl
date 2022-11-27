@@ -1,0 +1,5 @@
+<pre name='i_29_in' id='i_29_in' class='IFT'>Graphics3D[
+ Table[
+  Sphere[ncps[[i]], 0.1*((w[&quot;AtomicNumbers&quot;])[[i]])]
+  , {i, 1, Length[ncps]}]
+ ]</pre><div class='IFU'><a name='1637941934'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-1dg2dc</div>

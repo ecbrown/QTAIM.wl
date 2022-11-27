@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="UTF-8">
+
+<title>AssociatedNuclearAttractor&mdash;Wolfram Language Documentation</title>
+<meta name="buildnumber" content="0000000" />
+<meta name="historydata" content="{0.0, , , }" />
+<meta name="keywords" content="AssociatedNuclearAttractor" />
+
+<meta name="description" content="AssociatedNuclearAttractor[] AssociatedNuclearAttractor" />
+<script language="JavaScript" type="text/javascript">baselang='AssociatedNuclearAttractor';</script>
+<!--#include virtual="/common/includes/gl-head-includes.html"-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--[if IE]>
+<style type="text/css">
+/* doctype problem overrides */
+#menu .searchboxsub, #menu .searchboxsub-on { padding-bottom: 0; }
+#menu .headerSearchSubmit { margin-bottom: 4px; }
+
+/*
+.WRIdropMenu .WRImenuContents { margin-top: -2px; margin-left: -2px; }
+.WRIdropMenu .WRImenuContents .WRImenuContents { margin: 0; }
+*/
+</style>
+<![endif]-->
+<link rel="stylesheet" href="/webMathematica/Resources/Documentation/English/css/reference.css" />
+
+<script src="/webMathematica/Resources/Documentation/English/javascript/reference.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/documentation-search.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/faster-page-load.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/hyperlink-filter.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/brokenlinks.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/clipboard.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/image-swap.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/2013/javascript/toggle-highlight.js"></script>
+</head>
+<body id="ref" class="function">
+<a name="top"></a>
+ 
+<div class="main-wrapper">
+<div class="outer-wrapper">
+
+<div class="wrapper mainOuter">
+    <div class="mainContent">
+ <div class="topContentWrap">
+  <div class="ribbonWrap">
+   <span class="ribbonOuter"><span class="ribbonInner">Q T A I M SYMBOL</span></span>
+  </div>
+  
+  <div class="clear"><!-- --></div>
+ </div>
+ <h1>AssociatedNuclearAttractor</h1>
+ <img src="Files/AssociatedNuclearAttractor/1.png"
+     height="120"
+     width="20"
+     alt="" />
+ <div class="ObjectNameTranslation"></div>
+ <div class="functionIntroWrap">
+  <div class="functionIntro">
+   <p><span class="IF"><span class="specialcharacters">AssociatedNuclearAttractor<span class="openbracket">[</span><span class="closebracket">]</span></span></span> <br />AssociatedNuclearAttractor</p>
+  </div>
+ </div>
+ <div class="expandWrap closed"
+     id="DetailsAndOptions">
+  <div class="expandOuter">
+   <h2 class="expandInner"><a class="expand hide" title="show" href="#">Details</a><a class="collapse" title="hide" href="#">Details</a></h2>
+   <div class="expanded">
+    <ul class="functionList">
+     <div class="Code">
+      <pre><span class="Code">Needs[&quot;QTAIM`&quot;];</span></pre>
+     </div>
+     <p><a name="1798111171"></a>Load the wavefunction for a molecule:</p>
+     <div class="Code">
+      <pre><table class="InCell">
+        <tr><td class="lab" /><td class="Input"><div>
+           <img src=""
+               data-src="Files/AssociatedNuclearAttractor/I_2.png"
+               data-big="512 19"
+               data-small="512 19"
+               alt="Click for copyable input" />
+          </div><div id="i_1_out" class="IFL"></div></td></tr>
+       </table><br />link=Install[&quot;/Users/ecbrown/src/QTAIM.wl/QTAIM/QTAIM/read_wfn&quot;];</pre>
+     </div>
+     <div class="Code">
+      <pre><span class="Code">ElectronDensityDerivative[<br />wfn_,<br />{x_?NumericQ,y_?NumericQ,z_?NumericQ},{nx_?IntegerQ,ny_?IntegerQ,nz_?IntegerQ}]:=Module[<br />{nmo=wfn[&quot;NumberOfOccupiedMolecularOrbitals&quot;],np=wfn[&quot;NumberOfPrimitives&quot;],l=wfn[&quot;l&quot;],xp=wfn[&quot;xp&quot;],yp=wfn[&quot;yp&quot;],zp=wfn[&quot;zp&quot;],a=wfn[&quot;PrimitiveExponents&quot;],o=wfn[&quot;MolecularOrbitalOccupationNumbers&quot;],c=Flatten[wfn[&quot;MolecularOrbitalPrimitiveCoefficients&quot;]],link,res},res=rho1[nmo,np,x,y,z,nx,ny,nz,xp,yp,zp,l[[All,1]],l[[All,2]],l[[All,3]],a,c,o];<br />res];<br />ElectronDensityDerivative[<br />wfn_,<br />{x_?NumericQ,y_?NumericQ,z_?NumericQ},deriv_?MatrixQ]:=Module[<br />{nmo=wfn[&quot;NumberOfOccupiedMolecularOrbitals&quot;],np=wfn[&quot;NumberOfPrimitives&quot;],l=wfn[&quot;l&quot;],xp=wfn[&quot;xp&quot;],yp=wfn[&quot;yp&quot;],zp=wfn[&quot;zp&quot;],a=wfn[&quot;PrimitiveExponents&quot;],o=wfn[&quot;MolecularOrbitalOccupationNumbers&quot;],c=Flatten[wfn[&quot;MolecularOrbitalPrimitiveCoefficients&quot;]],link,res},<br />res=Table[<br />rho1[nmo,np,x,y,z,deriv[[d,1]],deriv[[d,2]],deriv[[d,3]],xp,yp,zp,l[[All,1]],l[[All,2]],l[[All,3]],a,c,o]<br />,{d,1,Length[deriv]}];<br />res<br />];<br />ElectronDensityDerivative[<br />wfn_,<br />xyz_?MatrixQ,{nx_?IntegerQ,ny_?IntegerQ,nz_?IntegerQ}]:=Module[<br />{nmo=wfn[&quot;NumberOfOccupiedMolecularOrbitals&quot;],np=wfn[&quot;NumberOfPrimitives&quot;],l=wfn[&quot;l&quot;],xp=wfn[&quot;xp&quot;],yp=wfn[&quot;yp&quot;],zp=wfn[&quot;zp&quot;],a=wfn[&quot;PrimitiveExponents&quot;],o=wfn[&quot;MolecularOrbitalOccupationNumbers&quot;],c=Flatten[wfn[&quot;MolecularOrbitalPrimitiveCoefficients&quot;]],link,res},<br />res=Table[<br />rho1[nmo,np,xyz[[nn,1]],xyz[[nn,2]],xyz[[nn,3]],nx,ny,nz,xp,yp,zp,l[[All,1]],l[[All,2]],l[[All,3]],a,c,o]<br />,{nn,1,Length[xyz]}];<br />res<br />];<br />ElectronDensityDerivative[<br />wfn_,<br />xyz_?MatrixQ,deriv_?MatrixQ]:=Module[<br />{nmo=wfn[&quot;NumberOfOccupiedMolecularOrbitals&quot;],np=wfn[&quot;NumberOfPrimitives&quot;],l=wfn[&quot;l&quot;],xp=wfn[&quot;xp&quot;],yp=wfn[&quot;yp&quot;],zp=wfn[&quot;zp&quot;],a=wfn[&quot;PrimitiveExponents&quot;],o=wfn[&quot;MolecularOrbitalOccupationNumbers&quot;],c=Flatten[wfn[&quot;MolecularOrbitalPrimitiveCoefficients&quot;]],link,res},<br />res=Table[<br />Table[<br />rho1[nmo,np,xyz[[nn,1]],xyz[[nn,2]],xyz[[nn,3]],deriv[[d,1]],deriv[[d,2]],deriv[[d,3]],xp,yp,zp,l[[All,1]],l[[All,2]],l[[All,3]],a,c,o]<br />,{d,1,Length[deriv]}]<br />,{nn,1,Length[xyz]}];<br />res<br />];</span></pre>
+     </div>
+     <p><a name="881273133"></a>Locate nuclear critical points:</p>
+     <div class="Code">
+      <pre><span class="Code">ncps=LocateNuclearCriticalPoints[w];<br />ncps // Chop // TableForm</span></pre>
+     </div>
+     <img src="Files/AssociatedNuclearAttractor/4.gif"
+         height="72"
+         width="509"
+         alt=""
+         class="Message" />
+     <table class="OCell">
+      <tr><td colspan="2"><div class="celllabelTableForm">Out[20]//TableForm=</div></td></tr>
+      <tr><td class="lab"> </td><td class="Output"><div class="TableForm">
+         <img src="Files/AssociatedNuclearAttractor/O_1.png"
+             width="366"
+             height="432"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <p><a name="1698735680"></a>Identify nuclear critical point that is associated with a point in space:</p>
+     <div class="Code">
+      <pre><span class="Code">AssociatedNuclearAttractor[w, ncps, {0.,0.,-2.5}]<br />AssociatedNuclearAttractor[w, ncps, {0.,0.,-2.4}]</span></pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[30]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_2.png"
+             height="16"
+             width="6"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <table class="OCell">
+      <tr><td class="lab">Out[31]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_3.png"
+             height="16"
+             width="6"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <div class="Code">
+      <pre><span class="Code">AssociatedNuclearAttractor[w, ncps, {0.,0.,0.}]</span></pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[32]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_4.png"
+             height="16"
+             width="6"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <div class="Code">
+      <pre><span class="Code">AssociatedNuclearAttractor[w, ncps, {0.,0.,-8}]</span></pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[33]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_5.png"
+             height="16"
+             width="6"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <div class="Code">
+      <pre><span class="Code">AssociatedNuclearAttractor[w, ncps, {0., 8,-8}]</span></pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[34]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_6.png"
+             height="16"
+             width="6"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <div class="Code">
+      <pre><span class="Code">AssociatedNuclearAttractor[w, ncps, {0.,-8, 8}]</span></pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[35]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_7.png"
+             height="16"
+             width="6"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <div class="Code">
+      <pre><span class="Code">AssociatedNuclearAttractor[w, ncps, {0., 8, 8}]</span></pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[36]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_8.png"
+             height="16"
+             width="6"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <p><a name="587726887"></a>Delineate the atomic basin for Nitrogen:</p>
+     <div class="Code">
+      <pre>rp=RegionPlot[<br /><span class="Code">AssociatedNuclearAttractor[w, ncps, {0., y, z}] == 1,</span><br />{y, -8, 8},<br />{z, -8, 8}<br />]</pre>
+     </div>
+     <div class="Code">
+      <pre><span class="Code">Show[<br />Graphics[<br />  Table[<br />   Disk[ncps[[i,{2,3}]], 0.1*(w[&quot;AtomicNumbers&quot;])[[i]] ],<br />    {i, 1, Length[ncps]}]<br />],<br />rp<br />]</span></pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[9]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_9.png"
+             height="235"
+             width="240"
+             alt="" />
+        </div></td></tr>
+     </table>
+     <p><a name="596311742"></a>Delineate the atomic basin for Nitrogen:</p>
+     <div class="Code">
+      <pre>rp3=RegionPlot3D[<br /><span class="Code">AssociatedNuclearAttractor[w, ncps, {x, y, z}] == 1,</span><br />{x, -10, 10},<br />{y, -10, 10},<br />{z, -10, 10}<br />]</pre>
+     </div>
+     <div class="Code">
+      <pre><span class="Code">Show[<br />Graphics3D[<br />  Table[<br />   Sphere[ncps[[i]], 0.1*w[&quot;AtomicNumbers&quot;][[i]] ],<br />    {i, 1, Length[ncps]}]<br />],<br />rp3<br />]</span></pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[6]=</td><td class="Output"><div class="output-image">
+         <img src="Files/AssociatedNuclearAttractor/O_10.png"
+             height="240"
+             width="123"
+             alt="" />
+        </div></td></tr>
+     </table>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+</div><!-- /wrapper -->
+
+	
+</div>
+
+
+</body></html>

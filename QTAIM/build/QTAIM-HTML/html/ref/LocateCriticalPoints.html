@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="UTF-8">
+
+<title>LocateCriticalPoints&mdash;Wolfram Language Documentation</title>
+<meta name="buildnumber" content="0000000" />
+<meta name="historydata" content="{0.0, , , }" />
+<meta name="keywords" content="LocateCriticalPoints" />
+
+<meta name="description" content="LocateCriticalPoints[] LocateCriticalPoints" />
+<script language="JavaScript" type="text/javascript">baselang='LocateCriticalPoints';</script>
+<!--#include virtual="/common/includes/gl-head-includes.html"-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--[if IE]>
+<style type="text/css">
+/* doctype problem overrides */
+#menu .searchboxsub, #menu .searchboxsub-on { padding-bottom: 0; }
+#menu .headerSearchSubmit { margin-bottom: 4px; }
+
+/*
+.WRIdropMenu .WRImenuContents { margin-top: -2px; margin-left: -2px; }
+.WRIdropMenu .WRImenuContents .WRImenuContents { margin: 0; }
+*/
+</style>
+<![endif]-->
+<link rel="stylesheet" href="/webMathematica/Resources/Documentation/English/css/reference.css" />
+
+<script src="/webMathematica/Resources/Documentation/English/javascript/reference.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/documentation-search.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/faster-page-load.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/hyperlink-filter.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/brokenlinks.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/clipboard.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/image-swap.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/2013/javascript/toggle-highlight.js"></script>
+</head>
+<body id="ref" class="function">
+<a name="top"></a>
+ 
+<div class="main-wrapper">
+<div class="outer-wrapper">
+
+<div class="wrapper mainOuter">
+    <div class="mainContent">
+ <div class="topContentWrap">
+  <div class="ribbonWrap">
+   <span class="ribbonOuter"><span class="ribbonInner">Q T A I M SYMBOL</span></span>
+  </div>
+  
+  <div class="clear"><!-- --></div>
+ </div>
+ <h1>LocateCriticalPoints</h1>
+ <img src="Files/LocateCriticalPoints/1.png"
+     height="120"
+     width="20"
+     alt="" />
+ <div class="ObjectNameTranslation"></div>
+ <div class="functionIntroWrap">
+  <div class="functionIntro">
+   <p><span class="IF"><span class="specialcharacters">LocateCriticalPoints<span class="openbracket">[</span><span class="closebracket">]</span></span></span> <br />LocateCriticalPoints</p>
+  </div>
+ </div>
+ <div class="expandWrap"
+     id="Examples">
+  <div class="expandOuter">
+   <h2 class="expandInner"><a class="expand hide" title="show" href="#">Examples</a><a class="collapse" title="hide" href="#">Examples</a><a class="all opener" title="open all" href="#"><span>open all</span></a><a class="all closer hide" title="close all" href="#"><span>close all</span></a></h2>
+   <div class="expanded">
+    <div class="expandSubWrap">
+     <div class="expandSubOuter">
+      <h3 class="expandSubInner"><a class="expand hide" href="#" title="show">Basic Examples<span class="special-character NonBreakingSpace">&#160;</span><span class="special-character NonBreakingSpace">&#160;</span><span>(1)</span></a><a class="collapse" href="#" title="hide">Basic Examples<span class="special-character NonBreakingSpace">&#160;</span><span class="special-character NonBreakingSpace">&#160;</span><span>(1)</span></a></h3>
+      <div class="expanded">
+       <table class="InCell">
+        <tr><td class="lab">In[1]:=</td><td class="Input"><div>
+           <a name="70491413"></a>
+           <img src="Files/LocateCriticalPoints/I_2.png"
+               height="17"
+               width="99"
+               alt="Click for copyable input" />
+          </div><div id="i_1_out" class="IFL"></div></td></tr>
+       </table>
+       <p><a name="1303379318"></a>Read a wavefunction for pyridine:</p>
+       <table class="InCell">
+        <tr><td class="lab">In[2]:=</td><td class="Input"><div>
+           <a name="176978091"></a>
+           <img src=""
+               data-src="Files/LocateCriticalPoints/I_4.png"
+               data-big="473 17"
+               data-small="322 35"
+               alt="Click for copyable input" />
+          </div><div id="i_3_out" class="IFL"></div></td></tr>
+       </table>
+       <p><a name="1085525451"></a>The electron density is the {0,0,0}-th derivative.  Many calculations underflow due to core primitive functions being so contracted -- so exponentially damped. Those primitives will be truncated to 0 exactly.</p>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[3]:=</td><td class="Input"><div>
+            <a name="752279997"></a>
+            <img src="Files/LocateCriticalPoints/I_6.png"
+                height="17"
+                width="275"
+                alt="Click for copyable input" />
+           </div><div id="i_5_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[3]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_1.png"
+                height="16"
+                width="51"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[4]:=</td><td class="Input"><div>
+            <a name="2031969330"></a>
+            <img src="Files/LocateCriticalPoints/I_8.png"
+                height="17"
+                width="322"
+                alt="Click for copyable input" />
+           </div><div id="i_7_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[4]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_2.png"
+                height="16"
+                width="51"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[5]:=</td><td class="Input"><div>
+            <a name="30898243"></a>
+            <img src="Files/LocateCriticalPoints/I_10.png"
+                height="17"
+                width="216"
+                alt="Click for copyable input" />
+           </div><div id="i_9_out" class="IFL"></div></td></tr>
+        </table>
+        <img src="Files/LocateCriticalPoints/4.gif"
+            height="72"
+            width="509"
+            alt=""
+            class="Message" />
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[6]:=</td><td class="Input"><div>
+            <a name="6700212"></a>
+            <img src="Files/LocateCriticalPoints/I_12.png"
+                height="17"
+                width="99"
+                alt="Click for copyable input" />
+           </div><div id="i_11_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td colspan="2"><div class="celllabelTableForm">Out[6]//TableForm=</div></td></tr>
+         <tr><td class="lab"> </td><td class="Output"><div class="TableForm">
+            <img src="Files/LocateCriticalPoints/O_3.png"
+                width="646"
+                height="520"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[7]:=</td><td class="Input"><div>
+            <a name="1491051228"></a>
+            <img src="Files/LocateCriticalPoints/I_14.png"
+                height="89"
+                width="303"
+                alt="Click for copyable input" />
+           </div><div id="i_13_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[7]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_4.png"
+                height="240"
+                width="123"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[8]:=</td><td class="Input"><div>
+           <a name="2108989140"></a>
+           <img src="Files/LocateCriticalPoints/I_16.png"
+               height="377"
+               width="333"
+               alt="Click for copyable input" />
+          </div><div id="i_15_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[9]:=</td><td class="Input"><div>
+           <a name="585976550"></a>
+           <img src="Files/LocateCriticalPoints/I_18.png"
+               height="233"
+               width="160"
+               alt="Click for copyable input" />
+          </div><div id="i_17_out" class="IFL"></div></td></tr>
+       </table>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[10]:=</td><td class="Input"><div>
+            <a name="285615274"></a>
+            <img src="Files/LocateCriticalPoints/I_20.png"
+                height="233"
+                width="160"
+                alt="Click for copyable input" />
+           </div><div id="i_19_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[10]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_5.png"
+                height="16"
+                width="47"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[11]:=</td><td class="Input"><div>
+            <a name="1189251161"></a>
+            <img src="Files/LocateCriticalPoints/I_22.png"
+                height="17"
+                width="92"
+                alt="Click for copyable input" />
+           </div><div id="i_21_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td colspan="2"><div class="celllabelTableForm">Out[11]//TableForm=</div></td></tr>
+         <tr><td class="lab"> </td><td class="Output"><div class="TableForm">
+            <img src="Files/LocateCriticalPoints/O_6.png"
+                width="20"
+                height="38"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[12]:=</td><td class="Input"><div>
+           <a name="223122359"></a>
+           <img src=""
+               data-src="Files/LocateCriticalPoints/I_24.png"
+               data-big="484 71"
+               data-small="363 89"
+               alt="Click for copyable input" />
+          </div><div id="i_23_out" class="IFL"></div></td></tr>
+       </table>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[13]:=</td><td class="Input"><div>
+            <a name="1295711668"></a>
+            <img src=""
+                data-src="Files/LocateCriticalPoints/I_26.png"
+                data-big="443 17"
+                data-small="383 35"
+                alt="Click for copyable input" />
+           </div><div id="i_25_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[13]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_7.png"
+                height="16"
+                width="7"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[14]:=</td><td class="Input"><div>
+            <a name="2040359052"></a>
+            <img src="Files/LocateCriticalPoints/I_28.png"
+                height="161"
+                width="264"
+                alt="Click for copyable input" />
+           </div><div id="i_27_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[14]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_8.png"
+                height="16"
+                width="7"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[15]:=</td><td class="Input"><div>
+            <a name="1637941934"></a>
+            <img src="Files/LocateCriticalPoints/I_30.png"
+                height="89"
+                width="303"
+                alt="Click for copyable input" />
+           </div><div id="i_29_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[15]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_9.png"
+                height="240"
+                width="201"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[16]:=</td><td class="Input"><div>
+           <a name="97327818"></a>
+           <img src="Files/LocateCriticalPoints/I_32.png"
+               height="197"
+               width="328"
+               alt="Click for copyable input" />
+          </div><div id="i_31_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[17]:=</td><td class="Input"><div>
+           <a name="88703380"></a>
+           <img src="Files/LocateCriticalPoints/I_34.png"
+               height="665"
+               width="301"
+               alt="Click for copyable input" />
+          </div><div id="i_33_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[18]:=</td><td class="Input"><div>
+           <a name="484056642"></a>
+           <img src="Files/LocateCriticalPoints/I_36.png"
+               height="179"
+               width="152"
+               alt="Click for copyable input" />
+          </div><div id="i_35_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[19]:=</td><td class="Input"><div>
+           <a name="53018078"></a>
+           <img src="Files/LocateCriticalPoints/I_38.png"
+               height="17"
+               width="95"
+               alt="Click for copyable input" />
+          </div><div id="i_37_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[20]:=</td><td class="Input"><div>
+           <a name="2016607088"></a>
+           <img src=""
+               data-src="Files/LocateCriticalPoints/I_40.png"
+               data-big="484 71"
+               data-small="363 89"
+               alt="Click for copyable input" />
+          </div><div id="i_39_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[21]:=</td><td class="Input"><div>
+           <a name="1528411062"></a>
+           <img src=""
+               data-src="Files/LocateCriticalPoints/I_42.png"
+               data-big="450 17"
+               data-small="387 35"
+               alt="Click for copyable input" />
+          </div><div id="i_41_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[22]:=</td><td class="Input"><div>
+           <a name="1952817267"></a>
+           <img src="Files/LocateCriticalPoints/I_44.png"
+               height="161"
+               width="267"
+               alt="Click for copyable input" />
+          </div><div id="i_43_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[23]:=</td><td class="Input"><div>
+           <a name="1553581759"></a>
+           <img src="Files/LocateCriticalPoints/I_46.png"
+               height="197"
+               width="328"
+               alt="Click for copyable input" />
+          </div><div id="i_45_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[24]:=</td><td class="Input"><div>
+           <a name="1862509240"></a>
+           <img src="Files/LocateCriticalPoints/I_48.png"
+               height="17"
+               width="99"
+               alt="Click for copyable input" />
+          </div><div id="i_47_out" class="IFL"></div></td></tr>
+       </table>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[25]:=</td><td class="Input"><div>
+            <a name="36398251"></a>
+            <img src="Files/LocateCriticalPoints/I_50.png"
+                height="17"
+                width="232"
+                alt="Click for copyable input" />
+           </div><div id="i_49_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[25]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_10.png"
+                height="65"
+                width="432"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[26]:=</td><td class="Input"><div>
+           <a name="1210870308"></a>
+           <img src="Files/LocateCriticalPoints/I_52.png"
+               height="143"
+               width="198"
+               alt="Click for copyable input" />
+          </div><div id="i_51_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[27]:=</td><td class="Input"><div>
+           <a name="1958109273"></a>
+           <img src="Files/LocateCriticalPoints/I_54.png"
+               height="17"
+               width="229"
+               alt="Click for copyable input" />
+          </div><div id="i_53_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[28]:=</td><td class="Input"><div>
+           <a name="557277795"></a>
+           <img src=""
+               data-src="Files/LocateCriticalPoints/I_56.png"
+               data-big="533 593"
+               data-small="382 647"
+               alt="Click for copyable input" />
+          </div><div id="i_55_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[29]:=</td><td class="Input"><div>
+           <a name="1665445374"></a>
+           <img src="Files/LocateCriticalPoints/I_58.png"
+               height="17"
+               width="262"
+               alt="Click for copyable input" />
+          </div><div id="i_57_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[30]:=</td><td class="Input"><div>
+           <a name="1637694807"></a>
+           <img src="Files/LocateCriticalPoints/I_60.png"
+               height="17"
+               width="245"
+               alt="Click for copyable input" />
+          </div><div id="i_59_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[31]:=</td><td class="Input"><div>
+           <a name="221842501"></a>
+           <img src="Files/LocateCriticalPoints/I_62.png"
+               height="17"
+               width="122"
+               alt="Click for copyable input" />
+          </div><div id="i_61_out" class="IFL"></div></td></tr>
+       </table>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[32]:=</td><td class="Input"><div>
+            <a name="134896077"></a>
+            <img src="Files/LocateCriticalPoints/I_64.png"
+                height="17"
+                width="275"
+                alt="Click for copyable input" />
+           </div><div id="i_63_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[32]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_11.png"
+                height="16"
+                width="39"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[33]:=</td><td class="Input"><div>
+            <a name="1283701816"></a>
+            <img src="Files/LocateCriticalPoints/I_66.png"
+                height="17"
+                width="322"
+                alt="Click for copyable input" />
+           </div><div id="i_65_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[33]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_12.png"
+                height="16"
+                width="39"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[34]:=</td><td class="Input"><div>
+           <a name="1099524025"></a>
+           <img src="Files/LocateCriticalPoints/I_68.png"
+               height="17"
+               width="216"
+               alt="Click for copyable input" />
+          </div><div id="i_67_out" class="IFL"></div></td></tr>
+       </table>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[35]:=</td><td class="Input"><div>
+            <a name="555707399"></a>
+            <img src="Files/LocateCriticalPoints/I_70.png"
+                height="17"
+                width="99"
+                alt="Click for copyable input" />
+           </div><div id="i_69_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td colspan="2"><div class="celllabelTableForm">Out[35]//TableForm=</div></td></tr>
+         <tr><td class="lab"> </td><td class="Output"><div class="TableForm">
+            <img src="Files/LocateCriticalPoints/O_13.png"
+                width="644"
+                height="136"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[36]:=</td><td class="Input"><div>
+            <a name="256091617"></a>
+            <img src="Files/LocateCriticalPoints/I_72.png"
+                height="89"
+                width="303"
+                alt="Click for copyable input" />
+           </div><div id="i_71_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[36]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_14.png"
+                height="240"
+                width="201"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[37]:=</td><td class="Input"><div>
+           <a name="1851532205"></a>
+           <img src="Files/LocateCriticalPoints/I_74.png"
+               height="377"
+               width="333"
+               alt="Click for copyable input" />
+          </div><div id="i_73_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[38]:=</td><td class="Input"><div>
+           <a name="276266900"></a>
+           <img src="Files/LocateCriticalPoints/I_76.png"
+               height="233"
+               width="160"
+               alt="Click for copyable input" />
+          </div><div id="i_75_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[39]:=</td><td class="Input"><div>
+           <a name="358143486"></a>
+           <img src="Files/LocateCriticalPoints/I_78.png"
+               height="233"
+               width="160"
+               alt="Click for copyable input" />
+          </div><div id="i_77_out" class="IFL"></div></td></tr>
+       </table>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[40]:=</td><td class="Input"><div>
+            <a name="673247529"></a>
+            <img src="Files/LocateCriticalPoints/I_80.png"
+                height="17"
+                width="92"
+                alt="Click for copyable input" />
+           </div><div id="i_79_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td colspan="2"><div class="celllabelTableForm">Out[40]//TableForm=</div></td></tr>
+         <tr><td class="lab"> </td><td class="Output"><div class="TableForm">
+            <img src="Files/LocateCriticalPoints/O_15.png"
+                width="572"
+                height="88"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[41]:=</td><td class="Input"><div>
+           <a name="179883860"></a>
+           <img src=""
+               data-src="Files/LocateCriticalPoints/I_82.png"
+               data-big="484 71"
+               data-small="363 89"
+               alt="Click for copyable input" />
+          </div><div id="i_81_out" class="IFL"></div></td></tr>
+       </table>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[42]:=</td><td class="Input"><div>
+            <a name="1798543691"></a>
+            <img src=""
+                data-src="Files/LocateCriticalPoints/I_84.png"
+                data-big="443 17"
+                data-small="383 35"
+                alt="Click for copyable input" />
+           </div><div id="i_83_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[42]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_16.png"
+                height="16"
+                width="251"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[43]:=</td><td class="Input"><div>
+            <a name="143999465"></a>
+            <img src="Files/LocateCriticalPoints/I_86.png"
+                height="161"
+                width="264"
+                alt="Click for copyable input" />
+           </div><div id="i_85_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[43]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_17.png"
+                height="16"
+                width="313"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[44]:=</td><td class="Input"><div>
+            <a name="2132421733"></a>
+            <img src="Files/LocateCriticalPoints/I_88.png"
+                height="197"
+                width="315"
+                alt="Click for copyable input" />
+           </div><div id="i_87_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[44]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_18.png"
+                height="157"
+                width="178"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[45]:=</td><td class="Input"><div>
+           <a name="257481748"></a>
+           <img src="Files/LocateCriticalPoints/I_90.png"
+               height="665"
+               width="301"
+               alt="Click for copyable input" />
+          </div><div id="i_89_out" class="IFL"></div></td></tr>
+       </table>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[46]:=</td><td class="Input"><div>
+            <a name="316189931"></a>
+            <img src="Files/LocateCriticalPoints/I_92.png"
+                height="179"
+                width="152"
+                alt="Click for copyable input" />
+           </div><div id="i_91_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[46]=</td><td class="Output"><div class="output-image">
+            <img src="Files/LocateCriticalPoints/O_19.png"
+                height="16"
+                width="47"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <table class="InCell">
+        <tr><td class="lab">In[47]:=</td><td class="Input"><div>
+           <a name="1329627639"></a>
+           <img src="Files/LocateCriticalPoints/I_94.png"
+               height="17"
+               width="95"
+               alt="Click for copyable input" />
+          </div><div id="i_93_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[48]:=</td><td class="Input"><div>
+           <a name="336897991"></a>
+           <img src=""
+               data-src="Files/LocateCriticalPoints/I_96.png"
+               data-big="484 71"
+               data-small="363 89"
+               alt="Click for copyable input" />
+          </div><div id="i_95_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[49]:=</td><td class="Input"><div>
+           <a name="1477641245"></a>
+           <img src=""
+               data-src="Files/LocateCriticalPoints/I_98.png"
+               data-big="450 17"
+               data-small="387 35"
+               alt="Click for copyable input" />
+          </div><div id="i_97_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[50]:=</td><td class="Input"><div>
+           <a name="1215510807"></a>
+           <img src="Files/LocateCriticalPoints/I_100.png"
+               height="161"
+               width="267"
+               alt="Click for copyable input" />
+          </div><div id="i_99_out" class="IFL"></div></td></tr>
+       </table>
+       <table class="InCell">
+        <tr><td class="lab">In[51]:=</td><td class="Input"><div>
+           <a name="1265231708"></a>
+           <img src="Files/LocateCriticalPoints/I_102.png"
+               height="197"
+               width="328"
+               alt="Click for copyable input" />
+          </div><div id="i_101_out" class="IFL"></div></td></tr>
+       </table>
+      </div>
+     </div>
+    </div>
+    <div class="toplink">
+     <a href="#top">Top</a>
+    </div>
+    <div class="clear"><!-- --></div>
+   </div>
+  </div>
+ </div>
+</div>
+</div><!-- /wrapper -->
+
+	
+</div>
+
+
+</body></html>

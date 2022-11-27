@@ -1,0 +1,2 @@
+<pre name='i_11_in' id='i_11_in' class='IFT'>hf6 = ReadWavefunctionFromWFX[
+   &quot;https://ericcbrown.com/QTAIM/wfx/hf6.wfx&quot;];</pre><div class='IFU'><a name='1095832251'></a>http://wolfram.com/xid/0q3bets74lkvzj4b8j521oxcb4raips-sepru1</div>

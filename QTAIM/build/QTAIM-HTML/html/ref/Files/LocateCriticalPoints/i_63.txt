@@ -1,0 +1,1 @@
+<pre name='i_63_in' id='i_63_in' class='IFT'>ElectronDensityDerivative[w, {0., 0., 0.}, {0, 0, 0}]</pre><div class='IFU'><a name='134896077'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-cilkrj</div>

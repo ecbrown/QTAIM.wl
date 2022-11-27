@@ -1,0 +1,1 @@
+<pre name='i_67_in' id='i_67_in' class='IFT'>ncps = LocateNuclearCriticalPoints[w];</pre><div class='IFU'><a name='1099524025'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-sgwwgb</div>

@@ -1,0 +1,336 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11764,        327]
+NotebookOptionsPosition[      8312,        247]
+NotebookOutlinePosition[     10244,        296]
+CellTagsIndexPosition[     10201,        293]
+WindowTitle->LocateNuclearCriticalPoints
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["Q T A I M SYMBOL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }]],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->False], {"\<\"QTAIM/ref/LocateNuclearCriticalPoints\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["QTAIM/ref/LocateNuclearCriticalPoints"]}, Visible -> 
+           False]]; SelectionMove[
+        DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/QTAIM/ref/\
+LocateNuclearCriticalPoints.html"], StandardForm]], "Input", 
+             TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$15107], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "QTAIM/ref/LocateNuclearCriticalPoints", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell["LocateNuclearCriticalPoints", "ObjectName"],
+ Cell[BoxData[
+  TemplateBox[{8},
+   "Spacer1"]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"LocateNuclearCriticalPoints", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]LocateNuclearCriticalPoints"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {{None}}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    TemplateBox[{6},
+     "Spacer1"]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1609710290],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ StyleBox["Needs[\"QTAIM`\"];\n\n", "Code"],
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"w", "=", 
+    RowBox[{
+    "ReadWavefunctionFromWFX", "[", 
+     "\"\<https://ericcbrown.com/QTAIM/wfx/pyridine.wfx\>\"", "]"}]}], ";"}]],
+   "Input"]
+}], "Code",
+ CellLabel->"In[8]:=",
+ CellID->1846042787],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["ncps=LocateNuclearCriticalPoints[w];", "Code"]], \
+"Code",
+ CellLabel->"In[11]:=",
+ CellID->1208084169],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FindMaximum", "lstol", 
+   "\"The line search decreased the step size to within the tolerance \
+specified by AccuracyGoal and PrecisionGoal but was unable to find a \
+sufficient increase in the function. You may need more than \\!\\(\\*RowBox[{\
+\\\"MachinePrecision\\\"}]\\) digits of working precision to meet these \
+tolerances.\"", 2, 11, 1, 22973604396892027349, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[11]:=",
+ CellID->819558460]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["ncps // Chop // TableForm", "Code"]], "Code",
+ CellLabel->"In[12]:=",
+ CellID->738417322],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", "0", "2.6786694676425826`"},
+    {"0", "0", 
+     RowBox[{"-", "2.6125995419442214`"}]},
+    {"0", "2.153482872251088`", "1.3613368166146165`"},
+    {"0", 
+     RowBox[{"-", "2.153482872251088`"}], "1.3613368166146165`"},
+    {"0", 
+     RowBox[{"-", "2.2592712833781907`"}], 
+     RowBox[{"-", "1.2685831701470631`"}]},
+    {"0", "2.2592712833781907`", 
+     RowBox[{"-", "1.2685831701470631`"}]},
+    {"0", "0", 
+     RowBox[{"-", "4.628749509960245`"}]},
+    {"0", "3.8579447575648835`", "2.447539422204952`"},
+    {"0", 
+     RowBox[{"-", "3.8579447575648835`"}], "2.447539422204952`"},
+    {"0", 
+     RowBox[{"-", "4.039227409849671`"}], 
+     RowBox[{"-", "2.2127228630550824`"}]},
+    {"0", "4.039227409849671`", 
+     RowBox[{"-", "2.2127228630550824`"}]}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellLabel->"Out[12]//TableForm=",
+ CellID->538994528]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Graphics3D[\n  Table[\n   Sphere[ncps[[i]], \
+0.1*w[\"AtomicNumbers\"][[i]] ],\n    {i, 1, Length[ncps]}]\n]", "Code"]], \
+"Code",
+ CellLabel->"In[13]:=",
+ CellID->1758278810],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   SphereBox[{1.0949130230209574`*^-22, -3.020764531175126*^-23, 
+    2.6786694676425826`}, 0.7000000000000001], 
+   SphereBox[{-2.002644079141254*^-22, -2.7331185301349263`*^-23, \
+-2.6125995419442214`}, 0.6000000000000001], 
+   SphereBox[{-1.8408569670579517`*^-22, 2.153482872251088, 
+    1.3613368166146165`}, 0.6000000000000001], 
+   SphereBox[{-2.6372610380226865`*^-16, -2.153482872251088, 
+    1.3613368166146165`}, 0.6000000000000001], 
+   SphereBox[{
+    2.079106440363763*^-22, -2.2592712833781907`, -1.2685831701470631`}, 
+    0.6000000000000001], 
+   SphereBox[{2.766813190652529*^-16, 
+    2.2592712833781907`, -1.2685831701470631`}, 0.6000000000000001], 
+   SphereBox[{-2.768337389573787*^-20, -7.885455786674777*^-20, \
+-4.628749509960245}, 0.1], 
+   SphereBox[{-1.7342467789705957`*^-19, 3.8579447575648835`, 
+    2.447539422204952}, 0.1], 
+   SphereBox[{-4.717943406933687*^-16, -3.8579447575648835`, 
+    2.447539422204952}, 0.1], 
+   SphereBox[{
+    3.894917044828946*^-20, -4.039227409849671, -2.2127228630550824`}, 0.1], 
+   SphereBox[{4.93829814998549*^-16, 4.039227409849671, -2.2127228630550824`},
+     0.1]},
+  ImageSize->{252.338931005264, 250.77582715107033`},
+  ImageSizeRaw->Automatic,
+  ViewPoint->{3.3703824894439154`, 0.20678270636144613`, -0.2185469908273062},
+  
+  ViewVertical->{0.9995807146230808, -0.01903636192843218, 
+   0.021817696444422396`}]], "Output",
+ CellLabel->"Out[13]=",
+ CellID->795009050]
+}, Open  ]]
+}, Closed]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"LocateNuclearCriticalPoints",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:QTAIM/guide/QTAIM", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2021, 7, 28, 17, 32, 17.033459}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "QTAIM`", "keywords" -> {},
+     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> 
+    True, "label" -> "Q T A I M Symbol", "language" -> "en", "paclet" -> 
+    "QTAIM", "status" -> "None", "summary" -> 
+    "LocateNuclearCriticalPoints[] LocateNuclearCriticalPoints", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "LocateNuclearCriticalPoints", "titlemodifier" -> "", "windowtitle" -> 
+    "LocateNuclearCriticalPoints", "type" -> "Symbol", "uri" -> 
+    "QTAIM/ref/LocateNuclearCriticalPoints", "WorkflowDockedCell" -> ""}, 
+  "SearchTextTranslated" -> "", "NewStyles" -> False},
+CellContext->"Global`",
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 19, 2021)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "12.3 for Mac OS X x86 (64-bit) (June 19, 2021)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[599, 21, 2350, 54, 70, "AnchorBarGrid",ExpressionUUID->"63fd0930-8594-4ac6-b0cf-9d038341f792",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2974, 79, 184, 6, 70, "ObjectNameGrid",ExpressionUUID->"35dd6afe-a0a2-4015-97c0-60ca210fd5fa"],
+Cell[3161, 87, 323, 9, 70, "Usage",ExpressionUUID->"b0064455-2ff2-4581-b7f5-0540cb76c158",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3521, 101, 630, 19, 70, "NotesSection",ExpressionUUID->"ea20f205-6420-4e96-9823-5b593ebd1877",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1609710290],
+Cell[4154, 122, 31, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"2fde166f-ceae-4dc5-82d6-535781d0cd4e"],
+Cell[4188, 124, 305, 11, 70, "Code",ExpressionUUID->"be312513-0583-42ad-972a-3c9bf557292b",
+ CellID->1846042787],
+Cell[CellGroupData[{
+Cell[4518, 139, 127, 3, 70, "Code",ExpressionUUID->"b985fa22-a465-4c3d-aef1-60750fe4e6ea",
+ CellID->1208084169],
+Cell[4648, 144, 515, 10, 70, "Message",ExpressionUUID->"172b90eb-05d4-4a9b-97e4-14bf90584fdb",
+ CellID->819558460]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5200, 159, 113, 2, 70, "Code",ExpressionUUID->"b40a8e40-be11-4e1f-b8df-464aa5a50ed8",
+ CellID->738417322],
+Cell[5316, 163, 1232, 35, 70, "Output",ExpressionUUID->"437eff36-6f32-4caf-b6cb-b8519952b1dc",
+ CellID->538994528]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6585, 203, 199, 4, 70, "Code",ExpressionUUID->"4efc88db-3c33-4683-bb99-a775e9c5f124",
+ CellID->1758278810],
+Cell[6787, 209, 1471, 32, 70, "Output",ExpressionUUID->"0c4dec06-b37e-46a9-8e49-001ab86ced4b",
+ CellID->795009050]
+}, Open  ]]
+}, Closed]],
+Cell[8285, 245, 23, 0, 70, "FooterCell",ExpressionUUID->"a8c84951-d2bd-4e9b-880b-6a0091e1665f"]
+}
+]
+*)
+
+(* End of internal cache information *)

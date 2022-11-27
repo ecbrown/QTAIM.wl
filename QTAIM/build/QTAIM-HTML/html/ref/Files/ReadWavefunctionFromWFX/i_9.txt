@@ -1,0 +1,2 @@
+<pre name='i_9_in' id='i_9_in' class='IFT'>furan = ReadWavefunctionFromWFX[
+   &quot;https://ericcbrown.com/QTAIM/wfx/furan.wfx&quot;];</pre><div class='IFU'><a name='185020295'></a>http://wolfram.com/xid/0q3bets74lkvzj4b8j521oxcb4raips-dcfwux</div>

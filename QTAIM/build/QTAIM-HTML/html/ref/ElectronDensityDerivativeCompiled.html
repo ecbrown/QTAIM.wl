@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="UTF-8">
+
+<title>ElectronDensityDerivativeCompiled&mdash;Wolfram Language Documentation</title>
+<meta name="buildnumber" content="0000000" />
+<meta name="historydata" content="{0.0, , , }" />
+<meta name="keywords" content="ElectronDensityDerivativeCompiled" />
+
+<meta name="description" content="ElectronDensityDerivativeCompiled[] ElectronDensityDerivativeCompiled" />
+<script language="JavaScript" type="text/javascript">baselang='ElectronDensityDerivativeCompiled';</script>
+<!--#include virtual="/common/includes/gl-head-includes.html"-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--[if IE]>
+<style type="text/css">
+/* doctype problem overrides */
+#menu .searchboxsub, #menu .searchboxsub-on { padding-bottom: 0; }
+#menu .headerSearchSubmit { margin-bottom: 4px; }
+
+/*
+.WRIdropMenu .WRImenuContents { margin-top: -2px; margin-left: -2px; }
+.WRIdropMenu .WRImenuContents .WRImenuContents { margin: 0; }
+*/
+</style>
+<![endif]-->
+<link rel="stylesheet" href="/webMathematica/Resources/Documentation/English/css/reference.css" />
+
+<script src="/webMathematica/Resources/Documentation/English/javascript/reference.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/documentation-search.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/faster-page-load.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/hyperlink-filter.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/brokenlinks.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/clipboard.js"></script>
+<script src="/webMathematica/Resources/Documentation/English/javascript/image-swap.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/2013/javascript/toggle-highlight.js"></script>
+</head>
+<body id="ref" class="function">
+<a name="top"></a>
+ 
+<div class="main-wrapper">
+<div class="outer-wrapper">
+
+<div class="wrapper mainOuter">
+    <div class="mainContent">
+ <div class="topContentWrap">
+  <div class="ribbonWrap">
+   <span class="ribbonOuter"><span class="ribbonInner">Q T A I M SYMBOL</span></span>
+  </div>
+  
+  <div class="clear"><!-- --></div>
+ </div>
+ <h1>ElectronDensityDerivativeCompiled</h1>
+ <img src="Files/ElectronDensityDerivativeCompiled/1.png"
+     height="120"
+     width="20"
+     alt="" />
+ <div class="ObjectNameTranslation"></div>
+ <div class="functionIntroWrap">
+  <div class="functionIntro">
+   <p><span class="IF"><span class="specialcharacters">ElectronDensityDerivativeCompiled<span class="openbracket">[</span><span class="closebracket">]</span></span></span> <br />ElectronDensityDerivativeCompiled</p>
+  </div>
+ </div>
+ <div class="expandWrap closed"
+     id="DetailsAndOptions">
+  <div class="expandOuter">
+   <h2 class="expandInner"><a class="expand hide" title="show" href="#">Details</a><a class="collapse" title="hide" href="#">Details</a></h2>
+   <div class="expanded">
+    <ul class="functionList">
+     <div class="Code">
+      <pre>Needs[&quot;QTAIM`&quot;]</pre>
+     </div>
+     <table class="OCell">
+      <tr><td class="lab">Out[9]=</td><td class="Output"><div class="output-image">
+         <img src="Files/ElectronDensityDerivativeCompiled/O_1.png"
+             height="16"
+             width="25"
+             alt="" />
+        </div></td></tr>
+     </table>
+    </ul>
+   </div>
+  </div>
+ </div>
+ <div class="expandWrap"
+     id="Examples">
+  <div class="expandOuter">
+   <h2 class="expandInner"><a class="expand hide" title="show" href="#">Examples</a><a class="collapse" title="hide" href="#">Examples</a><a class="all opener" title="open all" href="#"><span>open all</span></a><a class="all closer hide" title="close all" href="#"><span>close all</span></a></h2>
+   <div class="expanded">
+    <div class="expandSubWrap">
+     <div class="expandSubOuter">
+      <h3 class="expandSubInner"><a class="expand hide" href="#" title="show">Basic Examples<span class="special-character NonBreakingSpace">&#160;</span><span class="special-character NonBreakingSpace">&#160;</span><span>(1)</span></a><a class="collapse" href="#" title="hide">Basic Examples<span class="special-character NonBreakingSpace">&#160;</span><span class="special-character NonBreakingSpace">&#160;</span><span>(1)</span></a></h3>
+      <div class="expanded">
+       <table class="InCell">
+        <tr><td class="lab">In[1]:=</td><td class="Input"><div>
+           <a name="70491413"></a>
+           <img src="Files/ElectronDensityDerivativeCompiled/I_2.png"
+               height="17"
+               width="99"
+               alt="Click for copyable input" />
+          </div><div id="i_1_out" class="IFL"></div></td></tr>
+       </table>
+       <p><a name="1303379318"></a>Read a wavefunction for pyridine:</p>
+       <table class="InCell">
+        <tr><td class="lab">In[2]:=</td><td class="Input"><div>
+           <a name="176978091"></a>
+           <img src=""
+               data-src="Files/ElectronDensityDerivativeCompiled/I_4.png"
+               data-big="473 17"
+               data-small="322 35"
+               alt="Click for copyable input" />
+          </div><div id="i_3_out" class="IFL"></div></td></tr>
+       </table>
+       <p><a name="1085525451"></a>The electron density is the 0th derivative.  Many calculations underflow due to core primitive functions being so contracted -- so exponentially damped. Those primitives will be truncated to 0 exactly.</p>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[3]:=</td><td class="Input"><div>
+            <a name="752279997"></a>
+            <img src=""
+                data-src="Files/ElectronDensityDerivativeCompiled/I_6.png"
+                data-big="502 215"
+                data-small="260 233"
+                alt="Click for copyable input" />
+           </div><div id="i_5_out" class="IFL"></div></td></tr>
+        </table>
+        <img src="Files/ElectronDensityDerivativeCompiled/4.gif"
+            height="36"
+            width="530"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/5.gif"
+            height="36"
+            width="495"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/6.gif"
+            height="36"
+            width="487"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/7.gif"
+            height="36"
+            width="486"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/8.gif"
+            height="36"
+            width="483"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/9.gif"
+            height="36"
+            width="469"
+            alt=""
+            class="Message" />
+        <table class="OCell">
+         <tr><td class="lab">Out[3]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_2.png"
+                height="16"
+                width="39"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[4]:=</td><td class="Input"><div>
+            <a name="435859755"></a>
+            <img src=""
+                data-src="Files/ElectronDensityDerivativeCompiled/I_8.png"
+                data-big="502 215"
+                data-small="260 233"
+                alt="Click for copyable input" />
+           </div><div id="i_7_out" class="IFL"></div></td></tr>
+        </table>
+        <img src="Files/ElectronDensityDerivativeCompiled/10.gif"
+            height="36"
+            width="530"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/11.gif"
+            height="36"
+            width="495"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/12.gif"
+            height="36"
+            width="487"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/13.gif"
+            height="36"
+            width="486"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/14.gif"
+            height="36"
+            width="483"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/15.gif"
+            height="36"
+            width="469"
+            alt=""
+            class="Message" />
+        <table class="OCell">
+         <tr><td class="lab">Out[4]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_3.png"
+                height="16"
+                width="46"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[5]:=</td><td class="Input"><div>
+            <a name="227269494"></a>
+            <img src="Files/ElectronDensityDerivativeCompiled/I_10.png"
+                height="107"
+                width="189"
+                alt="Click for copyable input" />
+           </div><div id="i_9_out" class="IFL"></div></td></tr>
+        </table>
+        <img src="Files/ElectronDensityDerivativeCompiled/16.gif"
+            height="36"
+            width="487"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/17.gif"
+            height="36"
+            width="486"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/18.gif"
+            height="36"
+            width="483"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/19.gif"
+            height="36"
+            width="469"
+            alt=""
+            class="Message" />
+        <table class="OCell">
+         <tr><td class="lab">Out[5]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_4.png"
+                height="16"
+                width="73"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[6]:=</td><td class="Input"><div>
+            <a name="741819926"></a>
+            <img src="Files/ElectronDensityDerivativeCompiled/I_12.png"
+                height="107"
+                width="189"
+                alt="Click for copyable input" />
+           </div><div id="i_11_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[6]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_5.png"
+                height="16"
+                width="67"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[7]:=</td><td class="Input"><div>
+            <a name="960801210"></a>
+            <img src="Files/ElectronDensityDerivativeCompiled/I_14.png"
+                height="107"
+                width="189"
+                alt="Click for copyable input" />
+           </div><div id="i_13_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[7]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_6.png"
+                height="16"
+                width="73"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[8]:=</td><td class="Input"><div>
+            <a name="1571899392"></a>
+            <img src=""
+                data-src="Files/ElectronDensityDerivativeCompiled/I_16.png"
+                data-big="524 269"
+                data-small="282 287"
+                alt="Click for copyable input" />
+           </div><div id="i_15_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[8]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_7.png"
+                height="16"
+                width="78"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[9]:=</td><td class="Input"><div>
+            <a name="1335337687"></a>
+            <img src="Files/ElectronDensityDerivativeCompiled/I_18.png"
+                height="107"
+                width="189"
+                alt="Click for copyable input" />
+           </div><div id="i_17_out" class="IFL"></div></td></tr>
+        </table>
+        <img src="Files/ElectronDensityDerivativeCompiled/20.gif"
+            height="36"
+            width="487"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/21.gif"
+            height="36"
+            width="486"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/22.gif"
+            height="36"
+            width="483"
+            alt=""
+            class="Message" />
+        <img src="Files/ElectronDensityDerivativeCompiled/23.gif"
+            height="36"
+            width="469"
+            alt=""
+            class="Message" />
+        <table class="OCell">
+         <tr><td class="lab">Out[9]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_8.png"
+                height="16"
+                width="73"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[10]:=</td><td class="Input"><div>
+            <a name="1094747675"></a>
+            <img src="Files/ElectronDensityDerivativeCompiled/I_20.png"
+                height="107"
+                width="189"
+                alt="Click for copyable input" />
+           </div><div id="i_19_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[10]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_9.png"
+                height="16"
+                width="73"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[11]:=</td><td class="Input"><div>
+            <a name="1816394259"></a>
+            <img src=""
+                data-src="Files/ElectronDensityDerivativeCompiled/I_22.png"
+                data-big="524 269"
+                data-small="282 287"
+                alt="Click for copyable input" />
+           </div><div id="i_21_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[11]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_10.png"
+                height="16"
+                width="73"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <p><a name="1398048682"></a>The warning can be quieted:</p>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[12]:=</td><td class="Input"><div>
+            <a name="1006386152"></a>
+            <img src="Files/ElectronDensityDerivativeCompiled/I_24.png"
+                height="53"
+                width="289"
+                alt="Click for copyable input" />
+           </div><div id="i_23_out" class="IFL"></div></td></tr>
+        </table>
+        <table class="OCell">
+         <tr><td class="lab">Out[12]=</td><td class="Output"><div class="output-image">
+            <img src="Files/ElectronDensityDerivativeCompiled/O_11.png"
+                height="16"
+                width="51"
+                alt="" />
+           </div></td></tr>
+        </table>
+       </div>
+       <p><a name="2008678364"></a>Define a function for the electron density:</p>
+       <table class="InCell">
+        <tr><td class="lab">In[13]:=</td><td class="Input"><div>
+           <a name="901027505"></a>
+           <img src="Files/ElectronDensityDerivativeCompiled/I_26.png"
+               height="53"
+               width="304"
+               alt="Click for copyable input" />
+          </div><div id="i_25_out" class="IFL"></div></td></tr>
+       </table>
+       <p><a name="2134095776"></a>Confirm that integration of the electron density over all space gives the total number of electrons:</p>
+       <div class="IO">
+        <table class="InCell">
+         <tr><td class="lab">In[14]:=</td><td class="Input"><div>
+            <a name="475835038"></a>
+            <img src="Files/ElectronDensityDerivativeCompiled/I_28.png"
+                height="161"
+                width="311"
+                alt="Click for copyable input" />
+           </div><div id="i_27_out" class="IFL"></div></td></tr>
+        </table>
+        <img src="Files/ElectronDensityDerivativeCompiled/24.gif"
+            height="54"
+            width="496"
+            alt=""
+            class="Message" />
+       </div>
+       <table class="InCell">
+        <tr><td class="lab" /><td class="Input"><div>
+           <a name="1672255366"></a>
+           <img src="Files/ElectronDensityDerivativeCompiled/I_30.png"
+               height="35"
+               width="2"
+               alt="Click for copyable input" />
+          </div><div id="i_29_out" class="IFL"></div></td></tr>
+       </table>
+      </div>
+     </div>
+    </div>
+    <div class="toplink">
+     <a href="#top">Top</a>
+    </div>
+    <div class="clear"><!-- --></div>
+   </div>
+  </div>
+ </div>
+</div>
+</div><!-- /wrapper -->
+
+	
+</div>
+
+
+</body></html>

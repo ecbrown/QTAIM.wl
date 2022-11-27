@@ -1,0 +1,11 @@
+<pre name='i_87_in' id='i_87_in' class='IFT'>Graphics3D[
+ Join[
+  Table[
+   {Black, Sphere[cpsTable[[i, 1 ;; 3]], 0.1]}
+   , {i, 1, Length[cpsTable]}]
+  ,
+  Table[
+   Sphere[ncps[[i]], 0.1*((w[&quot;AtomicNumbers&quot;])[[i]])]
+   , {i, 1, Length[ncps]}]
+  ]
+ ]</pre><div class='IFU'><a name='2132421733'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-9jvhfb</div>

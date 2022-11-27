@@ -1,0 +1,5 @@
+<pre name='i_23_in' id='i_23_in' class='IFT'>CriticalPointCharacter[{x_, y_, z_}] := 
+  Total[Map[If[# == 0, 0, 1] &amp;, Chop[Eigenvalues[H[{x, y, z}]]]]];
+CriticalPointSignature[{x_, y_, z_}] := 
+  Total[Map[Which[# &lt; 0, -1, # == 0, 0, # &gt; 0, 1] &amp;, 
+    Chop[Eigenvalues[H[{x, y, z}]]]]];</pre><div class='IFU'><a name='223122359'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-dy4kll</div>

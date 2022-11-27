@@ -1,0 +1,13 @@
+<pre name='i_7_in' id='i_7_in' class='IFT'>ElectronDensityDerivativeCompiled[
+ 0., 0., 0., 
+ 0, 0, 1,
+ w[&quot;NumberOfOccupiedMolecularOrbitals&quot;],
+ w[&quot;NumberOfPrimitives&quot;],
+ w[&quot;l&quot;],
+ w[&quot;xp&quot;],
+ w[&quot;yp&quot;],
+ w[&quot;zp&quot;],
+ w[&quot;PrimitiveExponents&quot;],
+ w[&quot;MolecularOrbitalOccupationNumbers&quot;], 
+ w[&quot;MolecularOrbitalPrimitiveCoefficients&quot;]
+ ]</pre><div class='IFU'><a name='435859755'></a>http://wolfram.com/xid/0cxz4ls8qypn9fr4f952zlkbyc7kk-hhr9tp</div>

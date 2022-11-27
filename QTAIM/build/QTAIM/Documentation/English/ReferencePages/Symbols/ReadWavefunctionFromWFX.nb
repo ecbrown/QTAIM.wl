@@ -1,0 +1,318 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10214,        309]
+NotebookOptionsPosition[      6280,        221]
+NotebookOutlinePosition[      8337,        275]
+CellTagsIndexPosition[      8253,        270]
+WindowTitle->ReadWavefunctionFromWFX
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["Q T A I M SYMBOL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }]],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->False], {"\<\"QTAIM/ref/ReadWavefunctionFromWFX\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["QTAIM/ref/ReadWavefunctionFromWFX"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/QTAIM/ref/\
+ReadWavefunctionFromWFX.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$15896], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "QTAIM/ref/ReadWavefunctionFromWFX", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[TextData[{
+ Cell["ReadWavefunctionFromWFX", "ObjectName"],
+ Cell[BoxData[
+  TemplateBox[{8},
+   "Spacer1"]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"ReadWavefunctionFromWFX", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]ReadWavefunctionFromWFX"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {{None}}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1],
+
+Cell["Load a Wavefunction from a website:", "ExampleText",
+ CellID->1123590430],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<QTAIM`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1908058357],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"onetwodi", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/12_di.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->1198176860],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"fourcomplex2", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/4_COMPLEX2.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->1065917680],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"benzene", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/benzene.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->581285879],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"furan", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/furan.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->185020295],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"hf6", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/hf6.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->1095832251],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"insulin", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/insulin_hf.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->339894036],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"phenolphenol", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/phenol_phenol.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[8]:=",
+ CellID->1468345015],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pyridine", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/pyridine.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[9]:=",
+ CellID->1930333849],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tube", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/tube_6_4.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[10]:=",
+ CellID->1342126637]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"ReadWavefunctionFromWFX",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:QTAIM/guide/QTAIM", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2021, 7, 28, 17, 32, 22.485155}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "QTAIM`", "keywords" -> {},
+     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> 
+    True, "label" -> "Q T A I M Symbol", "language" -> "en", "paclet" -> 
+    "QTAIM", "status" -> "None", "summary" -> 
+    "ReadWavefunctionFromWFX[] ReadWavefunctionFromWFX", "synonyms" -> {}, 
+    "tabletags" -> {}, "title" -> "ReadWavefunctionFromWFX", "titlemodifier" -> 
+    "", "windowtitle" -> "ReadWavefunctionFromWFX", "type" -> "Symbol", "uri" -> 
+    "QTAIM/ref/ReadWavefunctionFromWFX"}},
+CellContext->"Global`",
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 19, 2021)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "12.3 for Mac OS X x86 (64-bit) (June 19, 2021)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[3442, 97, 259, 10, 70, "PrimaryExamplesSection",ExpressionUUID->"48396cd8-8a85-490c-b3ce-22c3cbe9fb90",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 8064, 263}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[595, 21, 2321, 53, 70, "AnchorBarGrid",ExpressionUUID->"33f7690d-afd4-46fa-8b37-414efe8c4cd3",
+ CellID->1],
+Cell[2919, 76, 180, 6, 70, "ObjectNameGrid",ExpressionUUID->"f482593b-379c-4c5e-abb7-1f6ab473c655"],
+Cell[3102, 84, 315, 9, 70, "Usage",ExpressionUUID->"0f1f50f2-5589-421d-a993-d24ec764a4c1",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[3442, 97, 259, 10, 70, "PrimaryExamplesSection",ExpressionUUID->"48396cd8-8a85-490c-b3ce-22c3cbe9fb90",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3726, 111, 187, 6, 70, "ExampleSection",ExpressionUUID->"1e86e7c3-7608-437a-87ec-8efeb1ed82ef",
+ CellID->1],
+Cell[3916, 119, 79, 1, 70, "ExampleText",ExpressionUUID->"24b7a21a-9535-4c27-8168-61439e488e28",
+ CellID->1123590430],
+Cell[3998, 122, 115, 3, 70, "Input",ExpressionUUID->"6d1ec05e-2060-4e5f-85cb-ea85b5e5c55a",
+ CellID->1908058357],
+Cell[4116, 127, 230, 8, 70, "Input",ExpressionUUID->"b2ef1942-8c55-4141-9407-de1c5bd663a3",
+ CellID->1198176860],
+Cell[4349, 137, 239, 8, 70, "Input",ExpressionUUID->"5f125633-eebc-472f-a4a8-6d0b3578be8f",
+ CellID->1065917680],
+Cell[4591, 147, 230, 8, 70, "Input",ExpressionUUID->"5556f2a1-1cf1-474b-a3ca-44efc37ce9d4",
+ CellID->581285879],
+Cell[4824, 157, 226, 8, 70, "Input",ExpressionUUID->"1537abc7-a404-40ac-855b-ea525553205e",
+ CellID->185020295],
+Cell[5053, 167, 223, 8, 70, "Input",ExpressionUUID->"56be5dc0-edd4-4eba-bc60-971d2e5b15d2",
+ CellID->1095832251],
+Cell[5279, 177, 233, 8, 70, "Input",ExpressionUUID->"b458b5c1-3b44-4447-8b32-fa5bafbd04d7",
+ CellID->339894036],
+Cell[5515, 187, 242, 8, 70, "Input",ExpressionUUID->"cd4b68d3-311d-48b4-b21a-ad85ee62eb64",
+ CellID->1468345015],
+Cell[5760, 197, 233, 8, 70, "Input",ExpressionUUID->"ad71025d-10a1-4a10-8e68-444161483f51",
+ CellID->1930333849],
+Cell[5996, 207, 230, 8, 70, "Input",ExpressionUUID->"447d33ae-ae75-4d66-914c-05ea976b1cbe",
+ CellID->1342126637]
+}, Open  ]]
+}, Open  ]],
+Cell[6253, 219, 23, 0, 70, "FooterCell",ExpressionUUID->"54264edc-27be-44fe-851b-a7fc2dbca3aa"]
+}
+]
+*)
+
+(* End of internal cache information *)

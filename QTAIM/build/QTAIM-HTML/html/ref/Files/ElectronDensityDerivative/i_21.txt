@@ -1,0 +1,4 @@
+<pre name='i_21_in' id='i_21_in' class='IFT'>Plot[
+ \[Rho][{0, 0, z}],
+ {z, -8, 8}
+ ]</pre><div class='IFU'><a name='902473772'></a>http://wolfram.com/xid/08cuvarart8wxvo6tv9u8y2tu-o7lfh6</div>

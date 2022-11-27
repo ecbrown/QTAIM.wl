@@ -1,0 +1,2 @@
+<pre name='i_1_in' id='i_1_in' class='IFT'>w = ReadWavefunctionFromWFX[
+   &quot;https://ericcbrown.com/QTAIM/wfx/pyridine.wfx&quot;];</pre><div class='IFU'>http://wolfram.com/xid/07wcjdb5ywvhp3lwcu6ohpsa8kdp2dy</div>

@@ -1,0 +1,9 @@
+<pre name='i_27_in' id='i_27_in' class='IFT'>cpsTable = Transpose[
+  {
+   uniqueCps[[All, 1]],
+   uniqueCps[[All, 2]],
+   uniqueCps[[All, 3]],
+   Map[CriticalPointCharacter, uniqueCps],
+   Map[CriticalPointSignature, uniqueCps]
+   }
+  ]</pre><div class='IFU'><a name='2040359052'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-7019em</div>

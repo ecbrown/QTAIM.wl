@@ -1,0 +1,2 @@
+<pre name='i_41_in' id='i_41_in' class='IFT'>uniqueCpsl = 
+ DeleteDuplicates[Chop[cpsl], EuclideanDistance[#1, #2] &lt; 1*^-8 &amp;]</pre><div class='IFU'><a name='1528411062'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-zj9fs4</div>

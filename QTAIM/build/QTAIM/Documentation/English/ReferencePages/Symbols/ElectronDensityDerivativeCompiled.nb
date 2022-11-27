@@ -1,0 +1,987 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     35610,        978]
+NotebookOptionsPosition[     25871,        772]
+NotebookOutlinePosition[     28088,        828]
+CellTagsIndexPosition[     28003,        823]
+WindowTitle->ElectronDensityDerivativeCompiled
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["Q T A I M SYMBOL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox[
+       InterpretationBox[Cell[TextData[{
+         "URL",
+         StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+          StripOnInput->False]
+        }]],
+        TextCell[
+         Row[{"URL", 
+           Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+       StripOnInput->
+        False], {"\<\"QTAIM/ref/ElectronDensityDerivativeCompiled\"\>":>
+      None, "\<\"Copy Wolfram Documentation Center URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["QTAIM/ref/ElectronDensityDerivativeCompiled"]}, Visible -> 
+           False]]; SelectionMove[
+        DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web URL\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/language/QTAIM/ref/\
+ElectronDensityDerivativeCompiled.html"], StandardForm]], "Input", 
+             TextClipboardType -> "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+            If[
+             TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$12013], 
+             "http://reference.wolfram.com/system-modeler/", 
+             "http://reference.wolfram.com/language/"], 
+            "QTAIM/ref/ElectronDensityDerivativeCompiled", ".html"]], 
+          None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic,
+      MenuStyle->"URLMenu"]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell["ElectronDensityDerivativeCompiled", "ObjectName"],
+ Cell[BoxData[
+  TemplateBox[{8},
+   "Spacer1"]]],
+ Cell[BoxData[""], "ObjectNameTranslation"]
+}], "ObjectNameGrid"],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"ElectronDensityDerivativeCompiled", "[", "]"}]], 
+      "InlineFormula"],
+     " \[LineSeparator]ElectronDensityDerivativeCompiled"
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{"Columns" -> {{None}}, "Rows" -> {{None}}}},
+ CellID->982511436]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    TemplateBox[{6},
+     "Spacer1"]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None, "Normal", Automatic},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->2031298673],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[CellGroupData[{
+
+Cell["Needs[\"QTAIM`\"]", "Code",
+ CellLabel->"In[8]:=",
+ CellID->1747977639],
+
+Cell[BoxData["XXXX"], "Output",
+ CellLabel->"Out[9]=",
+ CellID->168235860]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{6},
+   "Spacer1"]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->1489260752],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1083553079],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<QTAIM`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->70491413],
+
+Cell["Read a wavefunction for pyridine:", "ExampleText",
+ CellID->1303379318],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"w", "=", 
+   RowBox[{
+   "ReadWavefunctionFromWFX", "[", 
+    "\"\<https://ericcbrown.com/QTAIM/wfx/pyridine.wfx\>\"", "]"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->176978091],
+
+Cell["\<\
+The electron density is the 0th derivative.  Many calculations underflow due \
+to core primitive functions being so contracted -- so exponentially damped. \
+Those primitives will be truncated to 0 exactly.\
+\>", "ExampleText",
+ CellID->1085525451],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ElectronDensityDerivativeCompiled", "[", "\[IndentingNewLine]", 
+  RowBox[{
+  "0.", ",", " ", "0.", ",", "0.", ",", " ", "\[IndentingNewLine]", "0", ",", 
+   "0", ",", "0", ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<NumberOfOccupiedMolecularOrbitals\>\"", "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<NumberOfPrimitives\>\"", "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<l\>\"", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<xp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<yp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<zp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<PrimitiveExponents\>\"", "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<MolecularOrbitalOccupationNumbers\>\"", "]"}], ",", 
+   
+   RowBox[{"w", "[", "\"\<MolecularOrbitalPrimitiveCoefficients\>\"", "]"}]}],
+   "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->752279997],
+
+Cell[BoxData[
+ TemplateBox[{
+  "CompiledFunction", "cfse", 
+   "\"Compiled expression \\!\\(\\*RowBox[{\\\"_\\\", \\\"?\\\", \
+RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"#1\\\", \\\">\\\", \
+RowBox[{\\\"Log\\\", \\\"[\\\", RowBox[{\\\"Rational\\\", \\\"[\\\", RowBox[{\
+\\\"1\\\", \\\",\\\", \\\"100000000\\\"}], \\\"]\\\"}], \\\"]\\\"}]}], \
+\\\"&\\\"}], \\\")\\\"}]}]\\) should be a \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"machine-size real number\\\\\\\"\\\"}]\\).\"", 2,
+    10, 4, 22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->1561623258],
+
+Cell[BoxData[
+ TemplateBox[{
+  "CompiledFunction", "cfexe", 
+   "\"Could not complete external evaluation; proceeding with uncompiled \
+evaluation.\"", 2, 10, 5, 22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->1804447219],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"29946.327659614948`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 10, 6, 
+   22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->580346799],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"4502.2184257818035`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 10, 7, 
+   22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->17926119],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"1025.3698692905393`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 10, 8, 
+   22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->636571453],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"General\\\", \
+\\\"::\\\", \\\"munfl\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 10, 9, 22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->92881217],
+
+Cell[BoxData["7.63591941890535`"], "Output",
+ CellLabel->"Out[3]=",
+ CellID->1981486397]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ElectronDensityDerivativeCompiled", "[", "\[IndentingNewLine]", 
+  RowBox[{
+  "0.", ",", " ", "0.", ",", "0.", ",", " ", "\[IndentingNewLine]", "0", ",", 
+   "0", ",", "1", ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<NumberOfOccupiedMolecularOrbitals\>\"", "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<NumberOfPrimitives\>\"", "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<l\>\"", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<xp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<yp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<zp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<PrimitiveExponents\>\"", "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"w", "[", "\"\<MolecularOrbitalOccupationNumbers\>\"", "]"}], ",", 
+   
+   RowBox[{"w", "[", "\"\<MolecularOrbitalPrimitiveCoefficients\>\"", "]"}]}],
+   "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->435859755],
+
+Cell[BoxData[
+ TemplateBox[{
+  "CompiledFunction", "cfse", 
+   "\"Compiled expression \\!\\(\\*RowBox[{\\\"_\\\", \\\"?\\\", \
+RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"#1\\\", \\\">\\\", \
+RowBox[{\\\"Log\\\", \\\"[\\\", RowBox[{\\\"Rational\\\", \\\"[\\\", RowBox[{\
+\\\"1\\\", \\\",\\\", \\\"100000000\\\"}], \\\"]\\\"}], \\\"]\\\"}]}], \
+\\\"&\\\"}], \\\")\\\"}]}]\\) should be a \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"machine-size real number\\\\\\\"\\\"}]\\).\"", 2,
+    11, 10, 22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->1502127859],
+
+Cell[BoxData[
+ TemplateBox[{
+  "CompiledFunction", "cfexe", 
+   "\"Could not complete external evaluation; proceeding with uncompiled \
+evaluation.\"", 2, 11, 11, 22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->445172081],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"29946.327659614948`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 11, 12, 
+   22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->174139219],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"4502.2184257818035`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 11, 13, 
+   22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->1885126519],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"1025.3698692905393`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 11, 14, 
+   22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->1495160642],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"General\\\", \
+\\\"::\\\", \\\"munfl\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 11, 15, 22973557793450069198, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[4]:=",
+ CellID->1458756547],
+
+Cell[BoxData[
+ RowBox[{"-", "80.02376910835382`"}]], "Output",
+ CellLabel->"Out[4]=",
+ CellID->1647971277]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ElectronDensityDerivative", "[", 
+     RowBox[{"w", ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0.", ",", " ", "0.", ",", "0."}], "}"}], ",", " ", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", "1000", "}"}]}], "]"}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->227269494],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"29946.327659614948`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 12, 1, 
+   22973545216923133095, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[5]:=",
+ CellID->1954729683],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"4502.2184257818035`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 12, 2, 
+   22973545216923133095, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[5]:=",
+ CellID->936950375],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"1025.3698692905393`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 12, 3, 
+   22973545216923133095, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[5]:=",
+ CellID->1974852821],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"General\\\", \
+\\\"::\\\", \\\"munfl\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 12, 4, 22973545216923133095, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[5]:=",
+ CellID->1991598162],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2.048591`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[5]=",
+ CellID->2110186592]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ElectronDensityDerivative", "[", 
+     RowBox[{"w", ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0.", ",", " ", "0.", ",", "0."}], "}"}], ",", " ", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", "1000", "}"}]}], "]"}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->741819926],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2.212604`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[6]=",
+ CellID->67146050]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ElectronDensityDerivative", "[", 
+     RowBox[{"w", ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0.", ",", " ", "0.", ",", "0."}], "}"}], ",", " ", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", "1000", "}"}]}], "]"}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->960801210],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2.095688`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[7]=",
+ CellID->760143618]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ElectronDensityDerivativeCompiled", "[", "\[IndentingNewLine]", 
+     RowBox[{
+     "0.", ",", " ", "0.", ",", "0.", ",", " ", "\[IndentingNewLine]", "0", 
+      ",", "0", ",", "0", ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<NumberOfOccupiedMolecularOrbitals\>\"", "]"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<NumberOfPrimitives\>\"", "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<l\>\"", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<xp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<yp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<zp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<PrimitiveExponents\>\"", "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<MolecularOrbitalOccupationNumbers\>\"", "]"}], 
+      ",", 
+      RowBox[{
+      "w", "[", "\"\<MolecularOrbitalPrimitiveCoefficients\>\"", "]"}]}], 
+     "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"{", "1000", "}"}]}], "]"}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[8]:=",
+ CellID->1571899392],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.041638`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[8]=",
+ CellID->1588706523]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ElectronDensityDerivative", "[", 
+     RowBox[{"w", ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0.", ",", " ", "0.", ",", "0."}], "}"}], ",", " ", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", "10", "}"}]}], "]"}], "\[IndentingNewLine]", "]"}]], "Input",\
+
+ CellLabel->"In[9]:=",
+ CellID->1335337687],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"29946.327659614948`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 14, 5, 
+   22973545216923133095, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[9]:=",
+ CellID->396781891],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"4502.2184257818035`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 14, 6, 
+   22973545216923133095, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[9]:=",
+ CellID->776518102],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "munfl", 
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"1025.3698692905393`\\\"}], \\\"]\\\"}]\\) is too small to represent as a \
+normalized machine number; precision may be lost.\"", 2, 14, 7, 
+   22973545216923133095, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[9]:=",
+ CellID->681617495],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"General\\\", \
+\\\"::\\\", \\\"munfl\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 14, 8, 22973545216923133095, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[9]:=",
+ CellID->1267465367],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2.418706`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[9]=",
+ CellID->1400128576]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ElectronDensityDerivative", "[", 
+     RowBox[{"w", ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0.", ",", " ", "0.", ",", "0."}], "}"}], ",", " ", 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "]"}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", "10", "}"}]}], "]"}], "\[IndentingNewLine]", "]"}]], "Input",\
+
+ CellLabel->"In[10]:=",
+ CellID->1094747675],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.11275`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[10]=",
+ CellID->844794853]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"Do", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ElectronDensityDerivativeCompiled", "[", "\[IndentingNewLine]", 
+     RowBox[{
+     "0.", ",", " ", "0.", ",", "0.", ",", " ", "\[IndentingNewLine]", "0", 
+      ",", "0", ",", "1", ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<NumberOfOccupiedMolecularOrbitals\>\"", "]"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<NumberOfPrimitives\>\"", "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<l\>\"", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<xp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<yp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<zp\>\"", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<PrimitiveExponents\>\"", "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"w", "[", "\"\<MolecularOrbitalOccupationNumbers\>\"", "]"}], 
+      ",", 
+      RowBox[{
+      "w", "[", "\"\<MolecularOrbitalPrimitiveCoefficients\>\"", "]"}]}], 
+     "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+    RowBox[{"{", "10", "}"}]}], "]"}], "\[IndentingNewLine]", "]"}]], "Input",\
+
+ CellLabel->"In[11]:=",
+ CellID->1816394259],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2.250182`", ",", "Null"}], "}"}]], "Output",
+ CellLabel->"Out[11]=",
+ CellID->1681378907]
+}, Open  ]],
+
+Cell["The warning can be quieted:", "ExampleText",
+ CellID->1398048682],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Quiet", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ElectronDensityDerivative", "[", 
+    RowBox[{"w", ",", 
+     RowBox[{"{", 
+      RowBox[{"0.", ",", " ", "0.", ",", "0"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"General", "::", "munfl"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[12]:=",
+ CellID->1006386152],
+
+Cell[BoxData["0.022888126549040582`"], "Output",
+ CellLabel->"Out[12]=",
+ CellID->1789899921]
+}, Open  ]],
+
+Cell["Define a function for the electron density:", "ExampleText",
+ CellID->2008678364],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Rho]", "[", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_", ",", "z_"}], "}"}], "]"}], ":=", 
+   RowBox[{"Quiet", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ElectronDensityDerivative", "[", 
+      RowBox[{"w", ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "z"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"General", "::", "munfl"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellLabel->"In[13]:=",
+ CellID->901027505],
+
+Cell["\<\
+Confirm that integration of the electron density over all space gives the \
+total number of electrons:\
+\>", "ExampleText",
+ CellID->2134095776],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{"NIntegrate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Rho]", "[", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y", ",", "z"}], "}"}], "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", 
+      RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Method", "->", 
+     RowBox[{"{", 
+      RowBox[{"Automatic", ",", " ", 
+       RowBox[{"\"\<SymbolicProcessing\>\"", "->", "0"}]}], "}"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"AccuracyGoal", "\[Rule]", "2"}], ",", 
+    RowBox[{"PrecisionGoal", "\[Rule]", "Infinity"}]}], "]"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[14]:=",
+ CellID->475835038],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "slwcon", 
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"", 2, 6, 9, 22973432600870106712, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellLabel->"During evaluation of In[14]:=",
+ CellID->897045071]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellID->1672255366]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"ElectronDensityDerivativeCompiled",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:QTAIM/guide/QTAIM", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "HasOptions" -> False, "ExampleCounter" -> 1, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2021, 7, 28, 17, 32, 5.077605}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "QTAIM`", "keywords" -> {},
+     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> 
+    True, "label" -> "Q T A I M Symbol", "language" -> "en", "paclet" -> 
+    "QTAIM", "status" -> "None", "summary" -> 
+    "ElectronDensityDerivativeCompiled[] ElectronDensityDerivativeCompiled", 
+    "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "ElectronDensityDerivativeCompiled", "titlemodifier" -> "", "windowtitle" -> 
+    "ElectronDensityDerivativeCompiled", "type" -> "Symbol", "uri" -> 
+    "QTAIM/ref/ElectronDensityDerivativeCompiled", "WorkflowDockedCell" -> 
+    ""}, "SearchTextTranslated" -> "", "NewStyles" -> False},
+CellContext->"Global`",
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 19, 2021)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "12.3 for Mac OS X x86 (64-bit) (June 19, 2021)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4488, 141, 268, 10, 70, "PrimaryExamplesSection",ExpressionUUID->"442808da-b965-445c-996f-7286e8bb5d13",
+   CellTags->"PrimaryExamplesSection",
+   CellID->1489260752]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 27804, 816}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[605, 21, 2394, 56, 70, "AnchorBarGrid",ExpressionUUID->"78099aa3-7362-4d5d-a02d-1460ff344863",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3024, 81, 190, 6, 70, "ObjectNameGrid",ExpressionUUID->"cf36593e-5bac-4794-89a2-24df66af051a"],
+Cell[3217, 89, 342, 10, 70, "Usage",ExpressionUUID->"71adfc0e-6a45-4f81-8a5e-2e40a415197c",
+ CellID->982511436]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3596, 104, 630, 19, 70, "NotesSection",ExpressionUUID->"4654fcfa-d7ba-465d-93cf-28d83cad4f42",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->2031298673],
+Cell[4229, 125, 31, 0, 70, "SectionHeaderSpacer",ExpressionUUID->"1cfed8a5-1af8-4440-8a58-e4f74d93c1c9"],
+Cell[CellGroupData[{
+Cell[4285, 129, 77, 2, 70, "Code",ExpressionUUID->"b29b841e-3b64-4871-988b-314569b8356c",
+ CellID->1747977639],
+Cell[4365, 133, 74, 2, 70, "Output",ExpressionUUID->"73c5d069-6589-4ddd-b26a-63aa218d3302",
+ CellID->168235860]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4488, 141, 268, 10, 70, "PrimaryExamplesSection",ExpressionUUID->"442808da-b965-445c-996f-7286e8bb5d13",
+ CellTags->"PrimaryExamplesSection",
+ CellID->1489260752],
+Cell[CellGroupData[{
+Cell[4781, 155, 196, 6, 70, "ExampleSection",ExpressionUUID->"97eb7af3-bfbf-4181-95ed-f383b2d01d26",
+ CellID->1083553079],
+Cell[4980, 163, 113, 3, 70, "Input",ExpressionUUID->"3c9787c9-9459-4c1e-92c1-a20b49f49029",
+ CellID->70491413],
+Cell[5096, 168, 77, 1, 70, "ExampleText",ExpressionUUID->"8b631b8d-728b-4fda-b099-8ffb6caf0bf0",
+ CellID->1303379318],
+Cell[5176, 171, 225, 8, 70, "Input",ExpressionUUID->"cfb58389-d9d9-4d02-8601-52e474b55fb7",
+ CellID->176978091],
+Cell[5404, 181, 257, 5, 70, "ExampleText",ExpressionUUID->"c42dac99-ea31-4f72-a092-df5aa50264c8",
+ CellID->1085525451],
+Cell[CellGroupData[{
+Cell[5686, 190, 1044, 20, 70, "Input",ExpressionUUID->"5db7986d-9505-45aa-a990-2918baebd55c",
+ CellID->752279997],
+Cell[6733, 212, 610, 12, 70, "Message",ExpressionUUID->"82124e18-8ddc-44cf-9e38-9699864e6e98",
+ CellID->1561623258],
+Cell[7346, 226, 299, 7, 70, "Message",ExpressionUUID->"f51ce8aa-e6c5-4f1f-98cf-b17c30bf98b2",
+ CellID->1804447219],
+Cell[7648, 235, 403, 9, 70, "Message",ExpressionUUID->"677f9634-8d87-4c70-9ef6-bb7630ecb1de",
+ CellID->580346799],
+Cell[8054, 246, 402, 9, 70, "Message",ExpressionUUID->"c49f20ab-30b3-4d60-9e22-67903eb2f549",
+ CellID->17926119],
+Cell[8459, 257, 403, 9, 70, "Message",ExpressionUUID->"601f8f45-7482-4a27-8e1d-039b5a183011",
+ CellID->636571453],
+Cell[8865, 268, 368, 8, 70, "Message",ExpressionUUID->"1a6eb94f-7d84-494f-b3eb-8e4a1c9ebb96",
+ CellID->92881217],
+Cell[9236, 278, 88, 2, 70, "Output",ExpressionUUID->"87b336ae-0940-42dd-bee1-dbc52b294855",
+ CellID->1981486397]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9361, 285, 1044, 20, 70, "Input",ExpressionUUID->"8d667533-8276-456e-9869-22a37e1b497e",
+ CellID->435859755],
+Cell[10408, 307, 611, 12, 70, "Message",ExpressionUUID->"0c0f13db-6e48-4ea8-9b60-abbeb4259f76",
+ CellID->1502127859],
+Cell[11022, 321, 299, 7, 70, "Message",ExpressionUUID->"ef7c2d7f-17d5-423c-b5b6-d229126c10bb",
+ CellID->445172081],
+Cell[11324, 330, 404, 9, 70, "Message",ExpressionUUID->"1bdf0705-4671-4308-a9a5-dd2016636a05",
+ CellID->174139219],
+Cell[11731, 341, 405, 9, 70, "Message",ExpressionUUID->"572635d3-f2dc-462c-a399-6e964d237196",
+ CellID->1885126519],
+Cell[12139, 352, 405, 9, 70, "Message",ExpressionUUID->"b3073662-31ab-4f75-b191-e94a30549be3",
+ CellID->1495160642],
+Cell[12547, 363, 371, 8, 70, "Message",ExpressionUUID->"af227cb5-bc37-4214-94d9-c15b392eed4a",
+ CellID->1458756547],
+Cell[12921, 373, 106, 3, 70, "Output",ExpressionUUID->"c8889d9f-ed11-4051-8a10-73ad8b317bb2",
+ CellID->1647971277]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13064, 381, 554, 15, 70, "Input",ExpressionUUID->"28777ab3-54ca-4fcc-99d4-1dcda8bf7b19",
+ CellID->227269494],
+Cell[13621, 398, 404, 9, 70, "Message",ExpressionUUID->"0925e677-9406-4363-b8ec-4e8e28ec5004",
+ CellID->1954729683],
+Cell[14028, 409, 403, 9, 70, "Message",ExpressionUUID->"f223ca42-6ed4-4107-86c0-4dbddbc4c866",
+ CellID->936950375],
+Cell[14434, 420, 404, 9, 70, "Message",ExpressionUUID->"7f01fe83-a736-42c6-bfc5-d1f7f994f7b4",
+ CellID->1974852821],
+Cell[14841, 431, 370, 8, 70, "Message",ExpressionUUID->"6b51e8d4-74e0-4d44-983d-e76f02f965f8",
+ CellID->1991598162],
+Cell[15214, 441, 128, 4, 70, "Output",ExpressionUUID->"0c734e7c-df71-436c-85ed-9968f694a50d",
+ CellID->2110186592]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15379, 450, 554, 15, 70, "Input",ExpressionUUID->"2ace89d6-d59a-4c01-9d72-74013f918fdb",
+ CellID->741819926],
+Cell[15936, 467, 126, 4, 70, "Output",ExpressionUUID->"accaa3ee-e589-4f39-8c5a-d7bb86021b96",
+ CellID->67146050]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16099, 476, 554, 15, 70, "Input",ExpressionUUID->"ea42c39c-778a-4d78-b6bd-2a7f39a0c8dc",
+ CellID->960801210],
+Cell[16656, 493, 127, 4, 70, "Output",ExpressionUUID->"4fd96b95-267d-4490-8e79-b281be022149",
+ CellID->760143618]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16820, 502, 1299, 26, 70, "Input",ExpressionUUID->"271406c0-975e-461f-b6f4-e666ffc38795",
+ CellID->1571899392],
+Cell[18122, 530, 128, 4, 70, "Output",ExpressionUUID->"15b69f70-f1f1-4fab-961c-b7aea887ea98",
+ CellID->1588706523]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18287, 539, 552, 15, 70, "Input",ExpressionUUID->"ee703595-0d70-48af-85f2-f96fc3cc8e57",
+ CellID->1335337687],
+Cell[18842, 556, 403, 9, 70, "Message",ExpressionUUID->"3b40be40-2852-4141-a4de-781660c49cf5",
+ CellID->396781891],
+Cell[19248, 567, 403, 9, 70, "Message",ExpressionUUID->"1f487c8e-39aa-4828-8ae2-3d17aa3bd6e3",
+ CellID->776518102],
+Cell[19654, 578, 403, 9, 70, "Message",ExpressionUUID->"35986a74-66fd-45e0-92d6-d6bb64559f8d",
+ CellID->681617495],
+Cell[20060, 589, 370, 8, 70, "Message",ExpressionUUID->"308f17cc-185c-46cf-b823-d72d454dce7f",
+ CellID->1267465367],
+Cell[20433, 599, 128, 4, 70, "Output",ExpressionUUID->"ac73a8c0-ba23-4c1f-8ed3-becc056bf4ed",
+ CellID->1400128576]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20598, 608, 553, 15, 70, "Input",ExpressionUUID->"8245361c-23d9-4e91-86ea-08d64ad54ef4",
+ CellID->1094747675],
+Cell[21154, 625, 127, 4, 70, "Output",ExpressionUUID->"9f62c91f-f4ac-41bf-b5a4-13b09615bca9",
+ CellID->844794853]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21318, 634, 1297, 26, 70, "Input",ExpressionUUID->"db5bbf95-ac62-4e32-96f9-ed5c9371fe2c",
+ CellID->1816394259],
+Cell[22618, 662, 129, 4, 70, "Output",ExpressionUUID->"901fe295-8339-4d9f-96b1-de73f4b47d6e",
+ CellID->1681378907]
+}, Open  ]],
+Cell[22762, 669, 71, 1, 70, "ExampleText",ExpressionUUID->"c86ce579-dd96-4ca5-9020-f870d1231841",
+ CellID->1398048682],
+Cell[CellGroupData[{
+Cell[22858, 674, 462, 13, 70, "Input",ExpressionUUID->"2552d325-1508-4bad-bac8-e58a3f2d23bb",
+ CellID->1006386152],
+Cell[23323, 689, 93, 2, 70, "Output",ExpressionUUID->"e0f58835-6f5c-45bb-b8cb-e8e56a7dd9de",
+ CellID->1789899921]
+}, Open  ]],
+Cell[23431, 694, 87, 1, 70, "ExampleText",ExpressionUUID->"ff7e72be-1ff8-497d-ab95-efd85f38793d",
+ CellID->2008678364],
+Cell[23521, 697, 615, 18, 70, "Input",ExpressionUUID->"1a717b73-df6a-4ee9-96d5-71c078d3abd2",
+ CellID->901027505],
+Cell[24139, 717, 154, 4, 70, "ExampleText",ExpressionUUID->"ec486245-92f6-49ee-8c6a-aa3658790293",
+ CellID->2134095776],
+Cell[CellGroupData[{
+Cell[24318, 725, 1015, 26, 70, "Input",ExpressionUUID->"08bc9464-15e4-4423-abfc-27b9137c4930",
+ CellID->475835038],
+Cell[25336, 753, 400, 9, 70, "Message",ExpressionUUID->"59b3b917-7b09-44b2-94e6-e79747b631cd",
+ CellID->897045071]
+}, Open  ]],
+Cell[25751, 765, 66, 1, 70, "Input",ExpressionUUID->"c51418de-e49b-406d-97f1-e97942dab36f",
+ CellID->1672255366]
+}, Open  ]]
+}, Open  ]],
+Cell[25844, 770, 23, 0, 70, "FooterCell",ExpressionUUID->"c6523f58-22ce-463a-a28a-6eb3e88af51a"]
+}
+]
+*)
+
+(* End of internal cache information *)

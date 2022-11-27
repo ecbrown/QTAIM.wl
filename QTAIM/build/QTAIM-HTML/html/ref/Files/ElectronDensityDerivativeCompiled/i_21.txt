@@ -1,0 +1,16 @@
+<pre name='i_21_in' id='i_21_in' class='IFT'>AbsoluteTiming[Do[
+  ElectronDensityDerivativeCompiled[
+   0., 0., 0., 
+   0, 0, 1,
+   w[&quot;NumberOfOccupiedMolecularOrbitals&quot;],
+   w[&quot;NumberOfPrimitives&quot;],
+   w[&quot;l&quot;],
+   w[&quot;xp&quot;],
+   w[&quot;yp&quot;],
+   w[&quot;zp&quot;],
+   w[&quot;PrimitiveExponents&quot;],
+   w[&quot;MolecularOrbitalOccupationNumbers&quot;], 
+   w[&quot;MolecularOrbitalPrimitiveCoefficients&quot;]
+   ]
+  , {10}]
+ ]</pre><div class='IFU'><a name='1816394259'></a>http://wolfram.com/xid/0cxz4ls8qypn9fr4f952zlkbyc7kk-4bpw2d</div>

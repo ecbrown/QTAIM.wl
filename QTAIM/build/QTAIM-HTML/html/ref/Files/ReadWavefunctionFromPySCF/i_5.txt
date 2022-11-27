@@ -1,0 +1,8 @@
+<pre name='i_5_in' id='i_5_in' class='IFT'>importsInput = &quot;
+from pyscf import gto
+from pyscf import lib
+from pyscf.x2c import x2c
+import numpy
+from pyscf import scf, mcscf, symm
+from pyscf.tools import molden
+&quot;;</pre><div class='IFU'><a name='1210870308'></a>http://wolfram.com/xid/0b5iesgd1njgo3dmh3dthbwuihmkahmi-ua7fsm</div>

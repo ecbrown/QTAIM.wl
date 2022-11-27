@@ -1,0 +1,9 @@
+<pre name='i_43_in' id='i_43_in' class='IFT'>cpslTable = Transpose[
+  {
+   uniqueCpsl[[All, 1]],
+   uniqueCpsl[[All, 2]],
+   uniqueCpsl[[All, 3]],
+   Map[CriticalPointCharacter, uniqueCpsl],
+   Map[CriticalPointSignature, uniqueCpsl]
+   }
+  ]</pre><div class='IFU'><a name='1952817267'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-6kxxqd</div>

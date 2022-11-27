@@ -1,0 +1,20 @@
+<pre name='i_15_in' id='i_15_in' class='IFT'>grx[{x_?NumericQ, y_?NumericQ, z_?NumericQ}] := 
+  First[ElectronDensityDerivative[w, {x, y, z}, {{1, 0, 0}}]];
+gry[{x_?NumericQ, y_?NumericQ, z_?NumericQ}] := 
+  First[ElectronDensityDerivative[w, {x, y, z}, {{0, 1, 0}}]];
+grz[{x_?NumericQ, y_?NumericQ, z_?NumericQ}] := 
+  First[ElectronDensityDerivative[w, {x, y, z}, {{0, 0, 1}}]];
+H[{x_?NumericQ, y_?NumericQ, z_?NumericQ}] := Module[
+   {h},
+   h = ElectronDensityDerivative[w, {x, y, z}, 
+     {{2, 0, 0}, {1, 1, 0}, {1, 0, 1},
+      {1, 1, 0}, {0, 2, 0}, {0, 1, 1},
+      {1, 0, 1}, {0, 1, 1}, {0, 0, 2}}
+     ];
+   {
+    {h[[1]], h[[2]], h[[3]]},
+    {h[[4]], h[[5]], h[[6]]},
+    {h[[7]], h[[8]], h[[9]]}
+    }
+   ];
+</pre><div class='IFU'><a name='2108989140'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-85w8py</div>

@@ -1,0 +1,2 @@
+<pre name='i_19_in' id='i_19_in' class='IFT'>tube = ReadWavefunctionFromWFX[
+   &quot;https://ericcbrown.com/QTAIM/wfx/tube_6_4.wfx&quot;];</pre><div class='IFU'><a name='1342126637'></a>http://wolfram.com/xid/0q3bets74lkvzj4b8j521oxcb4raips-whcptr</div>

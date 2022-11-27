@@ -1,0 +1,8 @@
+<pre name='i_27_in' id='i_27_in' class='IFT'>lap\[Rho][{x_, y_, z_}] := Total[
+   ElectronDensityDerivative[w, {x, y, z}, 
+    {
+     {2, 0, 0},
+     {0, 2, 0},
+     {0, 0, 2}
+     }]
+   ];</pre><div class='IFU'><a name='285708771'></a>http://wolfram.com/xid/08cuvarart8wxvo6tv9u8y2tu-e0d0k1</div>

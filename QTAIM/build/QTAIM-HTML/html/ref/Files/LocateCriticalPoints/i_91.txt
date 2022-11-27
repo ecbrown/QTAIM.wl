@@ -1,0 +1,10 @@
+<pre name='i_91_in' id='i_91_in' class='IFT'>cpsl = LocateCriticalPoints[
+  w,
+  {
+   -grxl[{x, y, z}],
+   -gryl[{x, y, z}],
+   -grzl[{x, y, z}]
+   },
+  {x, -3, 3},
+  {y, -3, 3},
+  {z, -3, 3}]</pre><div class='IFU'><a name='316189931'></a>http://wolfram.com/xid/0isxfjejen9xyxqr169rcdjfa-fijbzx</div>

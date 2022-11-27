@@ -1,0 +1,4 @@
+<pre name='i_19_in' id='i_19_in' class='IFT'>Plot[
+ \[Rho][{0, 0, z}],
+ {z, -8, 8},
+ PlotRange -&gt; All]</pre><div class='IFU'><a name='136789561'></a>http://wolfram.com/xid/08cuvarart8wxvo6tv9u8y2tu-cjp5sb</div>

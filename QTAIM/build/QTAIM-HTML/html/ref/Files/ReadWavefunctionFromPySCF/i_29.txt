@@ -1,0 +1,5 @@
+<pre name='i_29_in' id='i_29_in' class='IFT'>lap\[Rho][w_, {x_, y_, z_}] := Quiet[ 
+   ElectronDensityDerivative[w, {x, y, z}, {2, 0, 0}] +
+    ElectronDensityDerivative[w, {x, y, z}, {0, 2, 0}] +
+    ElectronDensityDerivative[w, {x, y, z}, {0, 0, 2}],
+   {General::munfl}];</pre><div class='IFU'><a name='285708771'></a>http://wolfram.com/xid/0b5iesgd1njgo3dmh3dthbwuihmkahmi-e0d0k1</div>

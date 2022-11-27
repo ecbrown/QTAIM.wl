@@ -1,0 +1,6 @@
+<pre name='i_13_in' id='i_13_in' class='IFT'>AbsoluteTiming[Do[
+  ElectronDensityDerivative[w,
+   {0., 0., 0.}, 
+   {0, 0, 0}]
+  , {1000}]
+ ]</pre><div class='IFU'><a name='960801210'></a>http://wolfram.com/xid/0cxz4ls8qypn9fr4f952zlkbyc7kk-p6bk8s</div>

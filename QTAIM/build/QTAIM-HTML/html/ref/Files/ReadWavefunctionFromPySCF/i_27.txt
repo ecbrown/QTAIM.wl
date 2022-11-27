@@ -1,0 +1,9 @@
+<pre name='i_27_in' id='i_27_in' class='IFT'>ContourPlot[
+ \[Rho][w, {0, y, z}],
+ {y, -5, 5},
+ {z, -5, 5},
+ FrameLabel -&gt; {&quot;y&quot;, &quot;z&quot;},
+ Contours -&gt; $QTAIMContoursPositive,
+ PlotRange -&gt; All
+ , ColorFunction -&gt; &quot;PearlColors&quot;
+ , ColorFunctionScaling -&gt; False]</pre><div class='IFU'><a name='479621902'></a>http://wolfram.com/xid/0b5iesgd1njgo3dmh3dthbwuihmkahmi-h7t8ww</div>

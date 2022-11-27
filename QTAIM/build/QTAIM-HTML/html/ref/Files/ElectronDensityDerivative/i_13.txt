@@ -1,0 +1,8 @@
+<pre name='i_13_in' id='i_13_in' class='IFT'>ElectronDensityDerivative[w, {0., 0., 0.}, 
+ {
+  {0, 0, 0},
+  {1, 0, 0},
+  {0, 1, 0},
+  {0, 0, 1}
+  }
+ ]</pre><div class='IFU'><a name='251949018'></a>http://wolfram.com/xid/08cuvarart8wxvo6tv9u8y2tu-egafd4</div>
