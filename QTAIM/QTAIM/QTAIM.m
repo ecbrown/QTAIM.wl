@@ -957,7 +957,7 @@ ElectronDensityCompiled=Compile[
 	{c, _Real, 2},
 	{o, _Real, 1}		
 	}, Module[
-		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, cpos, apos, sqrtapos, p, cp, ctr},
+		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, cpos, apos, p, cp, ctr},
 
    xxp = x-xp;
    yyp = y-yp;
@@ -996,7 +996,7 @@ ElectronDensityCompiled=Compile[
    Total[Table[o[[i]]*cp[[i]]^2, {i,1,nmo}]]
 
 	]   
-, CompilationTarget -> "C", CompilationOptions -> {"ExpressionOptimization" -> True}];
+, CompilationTarget -> "WVM", CompilationOptions -> {"ExpressionOptimization" -> True}];
 
 ElectronDensityGradientCompiled=Compile[
 	{
@@ -1015,7 +1015,7 @@ ElectronDensityGradientCompiled=Compile[
 	{c, _Real, 2},
 	{o, _Real, 1}		
 	}, Module[
-		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, sqrtapos, 
+		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, 
 			p000, p100, p010, p001, cp000, cp100, cp010, cp001, ctr},
 
    xxp = x-xp;
@@ -1097,7 +1097,7 @@ ElectronDensityGradientCompiled=Compile[
      Total[Table[o[[i]]*2*cp001[[i]]*cp000[[i]], {i,1,nmo}]] 
    }
 	]   
-, CompilationTarget -> "C", CompilationOptions -> {"ExpressionOptimization" -> True}];
+, CompilationTarget -> "WVM", CompilationOptions -> {"ExpressionOptimization" -> True}];
 
 KineticEnergyDensityGCompiled=Compile[
 	{
@@ -1116,7 +1116,7 @@ KineticEnergyDensityGCompiled=Compile[
 	{c, _Real, 2},
 	{o, _Real, 1}		
 	}, Module[
-		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, sqrtapos, 
+		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, 
 			p000, p100, p010, p001, cp000, cp100, cp010, cp001, ctr},
 
    xxp = x-xp;
@@ -1207,7 +1207,7 @@ KineticEnergyDensityGCompiled=Compile[
 }
       ,{m,nmo}]]
 	]
-, CompilationTarget -> "C", CompilationOptions -> {"ExpressionOptimization" -> True}];
+, CompilationTarget -> "WVM", CompilationOptions -> {"ExpressionOptimization" -> True}];
 
 ElectronDensityGradientXCompiled=Compile[
 	{
@@ -1226,8 +1226,8 @@ ElectronDensityGradientXCompiled=Compile[
 	{c, _Real, 2},
 	{o, _Real, 1}		
 	}, Module[
-		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, sqrtapos, 
-			p000, p100, p010, p001, cp000, cp100, cp010, cp001, ctr},
+		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, 
+			p000, p100, cp000, cp100, ctr},
 
    xxp = x-xp;
    yyp = y-yp;
@@ -1282,7 +1282,7 @@ ElectronDensityGradientXCompiled=Compile[
      Total[Table[o[[i]]*2*cp100[[i]]*cp000[[i]], {i,1,nmo}]]
      
 	]   
-, CompilationTarget -> "C", CompilationOptions -> {"ExpressionOptimization" -> True}];
+, CompilationTarget -> "WVM", CompilationOptions -> {"ExpressionOptimization" -> True}];
 
 ElectronDensityGradientYCompiled=Compile[
 	{
@@ -1301,8 +1301,8 @@ ElectronDensityGradientYCompiled=Compile[
 	{c, _Real, 2},
 	{o, _Real, 1}		
 	}, Module[
-		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, sqrtapos, 
-			p000, p100, p010, p001, cp000, cp100, cp010, cp001, ctr},
+		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, 
+			p000, p010, cp000, cp010, ctr},
 
    xxp = x-xp;
    yyp = y-yp;
@@ -1356,7 +1356,7 @@ ElectronDensityGradientYCompiled=Compile[
      Total[Table[o[[i]]*2*cp010[[i]]*cp000[[i]], {i,1,nmo}]]
 
 	]   
-, CompilationTarget -> "C", CompilationOptions -> {"ExpressionOptimization" -> True}];
+, CompilationTarget -> "WVM", CompilationOptions -> {"ExpressionOptimization" -> True}];
 
 
 ElectronDensityGradientZCompiled=Compile[
@@ -1376,8 +1376,8 @@ ElectronDensityGradientZCompiled=Compile[
 	{c, _Real, 2},
 	{o, _Real, 1}		
 	}, Module[
-		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, sqrtapos, 
-			p000, p100, p010, p001, cp000, cp100, cp010, cp001, ctr},
+		{xxp, yyp, zzp, xxppos, yyppos, zzppos, expa, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, 
+			p000, p001, cp000, cp001, ctr},
 
    xxp = x-xp;
    yyp = y-yp;
@@ -1432,7 +1432,7 @@ ElectronDensityGradientZCompiled=Compile[
      Total[Table[o[[i]]*2*cp001[[i]]*cp000[[i]], {i,1,nmo}]] 
 
 	]   
-, CompilationTarget -> "C", CompilationOptions -> {"ExpressionOptimization" -> True}];
+, CompilationTarget -> "WVM", CompilationOptions -> {"ExpressionOptimization" -> True}];
 
 ElectronDensityDerivativeCompiled=Compile[
 	{
@@ -1458,16 +1458,13 @@ ElectronDensityDerivativeCompiled=Compile[
 	{cutoff, _Real}		
 	},
 Module[
-{nxmax,nymax, nzmax, gamma, pasum, pbsum, pxa, pya, pza, pxb, pyb, pzb,
-sqrta, mosum, ax, ay, az, bx, by, bz, expa, binx, biny, binz,
-nxkx, nyky, nzkz,
-xx0, yy0, zz0,
-pa, pb, pat, pbt, px, py, pz, 
-ce,
-n, d, i, j, k, kx, ky, kz, kkx, kky, kkz, nx, ny, nz, psum, KX, KY, KZ, mynp, tmp,
+{nxmax,nymax, nzmax, gamma, ax, ay, az, bx, by, bz, expa, binx, biny, binz,
+
+pa, pb, 
+n, d, i, j, k, kx, ky, kz, nx, ny, nz, KX, KY, KZ,
 res,
 xxp, yyp, zzp, xxppos, yyppos, zzppos, poscut, pos, poscount, lxpos, lypos, lzpos, expapos, exppos, cpos, apos, sqrtapos, 
-			p000, p100, p010, p001, cp000, cp100, cp010, cp001, ctr, npos, nidx, cpa, cpb, kcx, kcy, kcz},
+			 ctr, npos, nidx, cpa, cpb},
 
 
 
@@ -1621,7 +1618,7 @@ res
 
 ]
 
-, CompilationTarget -> "C", CompilationOptions -> {"ExpressionOptimization" -> True}];
+, CompilationTarget -> "WVM", CompilationOptions -> {"ExpressionOptimization" -> True}];
 
 Options[ElectronDensityDerivative] = {Cutoff -> Log[1.*^-8]};
 ElectronDensityDerivative[
@@ -2311,7 +2308,7 @@ Check[Quiet[
 Options[AssociatedNuclearAttractor] = 
   Sort[Join[Options[NDSolveValue], {Method -> "Adams", MaxPathLength -> 100000, BetaSphereRadii -> {} }]];
 AssociatedNuclearAttractor[wfn_, ncps_, {x0_?NumericQ, y0_?NumericQ, z0_?NumericQ}, opts : OptionsPattern[]] := Module[
-{soln, nearestTable, end, endpoint, cutoffs, distances, ctr, res},
+{soln, end, endpoint, cutoffs, distances, ctr, res},
  
  If[ rho[wfn, {x0,y0,z0}] < Min[$QTAIMContoursPositive], Return[0] ];
  
